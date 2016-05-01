@@ -19,29 +19,23 @@ client.stream('statuses/filter', {track: 'republican'}, function(stream) {
 
 client.stream();
 
+var http = require('http');
 
-var requestProxy = require('express-request-proxy'),
-  express = require('express'),
-  port = process.env.PORT || 3000,
-  app = express();
+http.createServer(function (q, r) {
 
-var proxyGitHub = function(request, response) {
-  console.log('Routing GitHub request for', request.params[0]);
-  (requestProxy({
-    url: 'https://api.github.com/' + request.params[0],
-    headers: { Authorization: 'token ' + process.env.GITHUB_TOKEN }
-  }))(request, response);
-};
-//
-// app.get('/github/*', proxyGitHub);
+  // control for favicon
 
-app.use(express.static('./'));
+  if (q.url === '/favicon.ico') {
+    r.writeHead(200, {'Content-Type': 'image/x-icon'} );
+    r.end();
+    console.log('favicon requested');
+    return;
+  }
 
-app.get('*', function(request, response) {
-  console.log('New request:', request.url);
-  response.sendFile('index.html', { root: '.' });
-});
+  // not the favicon? say hai
+  console.log('hello');
+  r.writeHead(200, {'Content-Type': 'text/plain'} );
+  r.write('Hello, world!');
+  r.end();
 
-app.listen(port, function() {
-  console.log('Server started on port ' + port + '!');
-});
+}).listen(8000);
