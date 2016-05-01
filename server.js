@@ -1,4 +1,7 @@
-var google = require('googleapis');
+var requestProxy = require('express-request-proxy'),
+  express = require('express'),
+  port = process.env.PORT || 3000,
+  app = express();
 
 var proxyGitHub = function(request, response) {
   console.log('Routing GitHub request for', request.params[0]);
@@ -7,8 +10,8 @@ var proxyGitHub = function(request, response) {
     headers: { Authorization: 'token ' + process.env.GITHUB_TOKEN }
   }))(request, response);
 };
-
-app.get('/github/*', proxyGitHub);
+//
+// app.get('/github/*', proxyGitHub);
 
 app.use(express.static('./'));
 
