@@ -1,17 +1,28 @@
+var Twitter = require('twitter');
+
+var client = new Twitter({
+  consumer_key: $TWITTER_CONSUMER_KEY,
+  consumer_secret: $TWITTER_CONSUMER_SECRET,
+  access_token_key: $TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: $TWITTER_ACCESS_TOKEN_SECRET,
+});
+
+client.stream('statuses/filter', {track: 'republican'}, function(stream) {
+  stream.on('data', function(tweet) {
+    console.log(tweet.text);
+  });
+
+  stream.on('error', function(error) {
+    throw error;
+  });
+});
+
+client.stream();
+
 var requestProxy = require('express-request-proxy'),
   express = require('express'),
   port = process.env.PORT || 3000,
   app = express();
-
-var proxyGitHub = function(request, response) {
-  console.log('Routing GitHub request for', request.params[0]);
-  (requestProxy({
-    url: 'https://api.github.com/' + request.params[0],
-    headers: { Authorization: 'token ' + process.env.GITHUB_TOKEN }
-  }))(request, response);
-};
-//
-// app.get('/github/*', proxyGitHub);
 
 app.use(express.static('./'));
 
