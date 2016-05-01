@@ -9,7 +9,7 @@ function lookup(address, callback) {
  * Election ID for which to fetch voter info.
  * @type {number}
  */
- var electionId = 2000;
+ var electionId = 1000;
 
 /**
  * Request object for given parameters.
@@ -19,6 +19,7 @@ var req = gapi.client.request({
     'path' : '/civicinfo/v2/voterinfo',
     'params' : {'electionId' : electionId, 'address' : address}
 });
+console.log(req);
 req.execute(callback);
 }
 
@@ -60,6 +61,6 @@ if (response.pollingLocations.length > 0) {
 * Initialize the API client and make a request.
 */
 function load() {
-  gapi.client.setApiKey('AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk');
+  gapi.client.setApiKey($GOOGLE_TOKEN);
   lookup('1263 Pacific Ave. Kansas City KS', renderResults);
 }
