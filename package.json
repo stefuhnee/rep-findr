@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "^4.13.3",
     "express-request-proxy": "^1.0.10",
-    "googleapis": "^5.2.1"
+    "googleapis": "^5.2.1",
+    "twitter": "1.2.5"
   }
 }
