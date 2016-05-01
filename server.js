@@ -1,3 +1,23 @@
+//Lets require/import the HTTP module
+var http = require('http');
+
+//Lets define a port we want to listen to
+const PORT=8080;
+
+//We need a function which handles requests and send response
+function handleRequest(request, response){
+    response.end('It Works!! Path Hit: ' + request.url);
+}
+
+//Create a server
+var server = http.createServer(handleRequest);
+
+//Lets start our server
+server.listen(PORT, function(){
+    //Callback triggered when server is successfully listening. Hurray!
+    console.log("Server listening on: http://localhost:%s", PORT);
+});
+
 var Twitter = require('twitter');
 
 var client = new Twitter({
@@ -18,24 +38,3 @@ client.stream('statuses/filter', {track: 'republican'}, function(stream) {
 });
 
 client.stream();
-
-var http = require('http');
-
-http.createServer(function (q, r) {
-
-  // control for favicon
-
-  if (q.url === '/favicon.ico') {
-    r.writeHead(200, {'Content-Type': 'image/x-icon'} );
-    r.end();
-    console.log('favicon requested');
-    return;
-  }
-
-  // not the favicon? say hai
-  console.log('hello');
-  r.writeHead(200, {'Content-Type': 'text/plain'} );
-  r.write('Hello, world!');
-  r.end();
-
-}).listen(8000);
