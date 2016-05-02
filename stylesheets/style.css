@@ -25,6 +25,7 @@ footer {
 header {
   background-color: #D6D6D6;
   position: fixed;
+  z-index: 50;
   height: 60px;
   width: 100%;
   text-align: center;
@@ -44,7 +45,8 @@ main {
   background-color: white;
   position: relative;
   top: 60px;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
 footer nav {
   display: table;
@@ -75,7 +77,8 @@ footer nav {
   display: table;
   height: 50vh;
   width: 100%;
-  outline: 1px solid black; }
+  outline: 1px solid black;
+  position: relative; }
   .main-input div {
     display: table-cell;
     vertical-align: middle;
@@ -127,7 +130,8 @@ footer nav {
 .project-info {
   padding: 0 2vh;
   padding-top: 2vh;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .project-info h1 {
     font-size: 20px;
     display: inline-block;
