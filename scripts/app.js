@@ -3,17 +3,17 @@
   var userAddress;
   var $addressInputEl = $('input[name=userProvidedAddress]');
 
-  addressController.getUserAddress = function(){
-    userAddress = $addressInputEl.val();
-    console.log(userAddress);
-    return userAddress;
-  };
+  // addressController.getUserAddress = function(){
+  //   userAddress = $addressInputEl.val();
+  //   console.log(userAddress);
+  //   return userAddress;
+  // };
 
   addressController.handleUserAddress = function(){
     $('.rep-findr').on('click', $addressInputEl, function(){
-
+      userAddress = $addressInputEl.val();
       console.log('I was clicked');
-      civicDataAPI.requestData();
+      civicDataAPI.requestData(userAddress, 'legislatorUpperBody');
 
     });
   };
