@@ -2,9 +2,10 @@
   var addressController = {};
   var userAddress;
   var $addressInputEl = $('input[name=userProvidedAddress]');
-  
+
   addressController.getUserAddress = function(){
     userAddress = $addressInputEl.val();
+    console.log(userAddress);
     return userAddress;
   };
 
