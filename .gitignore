@@ -2,3 +2,5 @@ stylesheets/.sass-cache*
 stylesheets/style.css.map
 .env
 node_modules
+vendor/styles/.DS_Store
+.DS_Store
