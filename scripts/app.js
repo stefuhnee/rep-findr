@@ -14,7 +14,6 @@
       userAddress = $addressInputEl.val();
       console.log('I was clicked');
       civicDataAPI.requestData(userAddress, 'legislatorUpperBody');
-
     });
   };
 
