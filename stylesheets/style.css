@@ -1,6 +1,61 @@
-@import url(/vendor/styles/normalize.css);
-@import url(/vendor/styles/jquery-ui.min.css);
-@import url(/vendor/styles/jquery-ui.structure.min.css);
-@import url(/vendor/styles/jquery-ui.theme.min.css);
+@import url(../vendor/styles/normalize.css);
+@import url(../vendor/styles/jquery-ui.min.css);
+@import url(../vendor/styles/jquery-ui.structure.min.css);
+@import url(../vendor/styles/jquery-ui.theme.min.css);
+body {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  font-family: Helvetica; }
+
+header {
+  background-color: #D6D6D6;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  display: table; }
+  header h1 {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-style: italic;
+    font-size: 6vh; }
+    header h1 #d {
+      color: #3C3B6E; }
+    header h1 #r {
+      color: #B22234; }
+
+main {
+  background-color: white;
+  outline: 1px solid black;
+  height: 50vh;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  display: table; }
+
+.main-input {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle; }
+  .main-input input {
+    font-size: 3vh;
+    color: #D6D6D6;
+    text-align: center;
+    width: 75%;
+    height: 13%;
+    box-shadow: 1px 2px 6px #53585F; }
+  .main-input button {
+    color: white;
+    font-size: 3vh;
+    background-color: #3C3B6E;
+    margin-top: 2vh;
+    width: 55%;
+    height: 13%;
+    border-radius: 12px;
+    text-shadow: none;
+    border: none;
+    box-shadow: none; }
 
 /*# sourceMappingURL=style.css.map */
