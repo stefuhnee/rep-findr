@@ -2,11 +2,15 @@
 @import url(../vendor/styles/jquery-ui.min.css);
 @import url(../vendor/styles/jquery-ui.structure.min.css);
 @import url(../vendor/styles/jquery-ui.theme.min.css);
+@import url(../vendor/styles/icons.css);
 body {
   width: 100%;
   margin: 0 auto;
   position: relative;
   font-family: Helvetica; }
+
+a {
+  text-decoration: none; }
 
 .clearfix {
   clear: both; }
@@ -16,11 +20,12 @@ footer {
   background-color: #B22234;
   position: relative;
   top: 60px;
-  margin-top: 2vh; }
+  margin-top: 3vh; }
 
 header {
   background-color: #D6D6D6;
   position: fixed;
+  z-index: 50;
   height: 60px;
   width: 100%;
   text-align: center;
@@ -40,16 +45,40 @@ main {
   background-color: white;
   position: relative;
   top: 60px;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
-footer nav ul {
-  list-style: none; }
+footer nav {
+  display: table;
+  height: 60px;
+  margin: 0 auto;
+  width: 100%; }
+  footer nav ul {
+    list-style: none;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding: 0 3vh;
+    margin: 0;
+    text-align: center; }
+    footer nav ul a {
+      color: white; }
+    footer nav ul :nth-child(1) {
+      float: left; }
+    footer nav ul :nth-child(2) a {
+      padding: 0 1vmin; }
+    footer nav ul :nth-child(3) {
+      float: right; }
+    footer nav ul li {
+      display: inline-block;
+      font-size: 6vmin; }
 
 .main-input {
   display: table;
   height: 50vh;
   width: 100%;
-  outline: 1px solid black; }
+  outline: 1px solid black;
+  position: relative; }
   .main-input div {
     display: table-cell;
     vertical-align: middle;
@@ -101,7 +130,8 @@ footer nav ul {
 .project-info {
   padding: 0 2vh;
   padding-top: 2vh;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .project-info h1 {
     font-size: 20px;
     display: inline-block;

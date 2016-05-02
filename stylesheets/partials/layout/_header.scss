@@ -1,6 +1,7 @@
 header {
   background-color: $light-grey;
   position: fixed;
+  z-index: 50;
   height: 60px;
   width: 100%;
   text-align: center;

@@ -5,6 +5,10 @@ body {
   font-family: $base-font;
 }
 
+a {
+  text-decoration: none;
+}
+
 .clearfix {
   clear: both;
 }
