@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rep Findr</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <!-- <link rel="stylesheet" href="stylesheets/style.css"> -->
   <script id="rep-template" type="text/x-handlebars-template">
     <article>
       <img src="{{img-src}}">
@@ -22,20 +22,31 @@
     </article>
   </script>
 
+
+
 </head>
 <body>
   <header>
   </header>
 
   <main>
+    <div>
+      <input type="text" name="userProvidedAddress" placeholder="Enter your address here" value="wat">
+      <button class="rep-findr">Find your rep!</button>
+    </div>
   </main>
 
   <footer>
   </footer>
-  <script src="/vendor/scripts/jquery-2.2.3.min.js"></script>
-  <script src="/vendor/scripts/jquery-ui.min.js"></script>
-  <script src="/vendor/scripts/handlebars.js"></script>
-  <script src="/vendor/scripts/page.js"></script>
+  <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
+  <script src="vendor/scripts/jquery-ui.min.js"></script>
+  <script src="vendor/scripts/handlebars.js"></script>
+  <script src="vendor/scripts/page.js"></script>
+
+  <script src="scripts/app.js"></script>
+  <script src="scripts/model.js"></script>
+
+
   <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 </body>
 
