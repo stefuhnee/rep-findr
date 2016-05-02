@@ -1,16 +1,23 @@
 (function(module) {
   var addressController = {};
   var userAddress;
-
-  addressController.collectUserAddress = function(e){
-    userAddress = e.target.userProvidedAddress.value.replace(' ', '+');
+  var $addressInputEl = $('input[name=userProvidedAddress]');
+  
+  addressController.getUserAddress = function(){
+    userAddress = $addressInputEl.val();
+    return userAddress;
   };
 
   addressController.handleUserAddress = function(){
-    $('button').on('click', function{
-      requestData();
-    })
-  }
+    $('.rep-findr').on('click', $addressInputEl, function(){
+
+      console.log('I was clicked');
+      civicDataAPI.requestData();
+
+    });
+  };
+
+  addressController.handleUserAddress();
 
   module.addressController = addressController;
 })(window);
