@@ -4,3 +4,7 @@ body {
   position: relative;
   font-family: $base-font;
 }
+
+.clearfix {
+  clear: both;
+}

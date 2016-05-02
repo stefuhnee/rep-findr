@@ -1,9 +1,13 @@
 // Partials
 @import "partials/globals";
 @import "partials/base/base";
+@import "partials/layout/footer";
 @import "partials/layout/header";
 @import "partials/layout/main";
+@import "partials/modules/footer-nav";
 @import "partials/modules/main-input";
+@import "partials/modules/party-boxes";
+@import "partials/modules/project-info";
 
 // Third-Party
 @import "../vendor/styles/normalize.css";

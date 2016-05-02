@@ -8,6 +8,16 @@ body {
   position: relative;
   font-family: Helvetica; }
 
+.clearfix {
+  clear: both; }
+
+footer {
+  height: 60px;
+  background-color: #B22234;
+  position: relative;
+  top: 60px;
+  margin-top: 2vh; }
+
 header {
   background-color: #D6D6D6;
   position: fixed;
@@ -28,34 +38,77 @@ header {
 
 main {
   background-color: white;
-  outline: 1px solid black;
-  height: 50vh;
-  position: absolute;
+  position: relative;
   top: 60px;
-  width: 100%;
-  display: table; }
+  width: 100%; }
+
+footer nav ul {
+  list-style: none; }
 
 .main-input {
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle; }
-  .main-input input {
-    font-size: 3vh;
-    color: #D6D6D6;
-    text-align: center;
-    width: 75%;
-    height: 13%;
-    box-shadow: 1px 2px 6px #53585F; }
-  .main-input button {
-    color: white;
-    font-size: 3vh;
-    background-color: #3C3B6E;
-    margin-top: 2vh;
-    width: 55%;
-    height: 13%;
-    border-radius: 12px;
-    text-shadow: none;
-    border: none;
-    box-shadow: none; }
+  display: table;
+  height: 50vh;
+  width: 100%;
+  outline: 1px solid black; }
+  .main-input div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center; }
+    .main-input div input {
+      font-size: 3vh;
+      color: #D6D6D6;
+      text-align: center;
+      width: 75%;
+      height: 13%;
+      box-shadow: 1px 2px 6px #53585F; }
+    .main-input div button {
+      color: white;
+      font-size: 3vh;
+      background-color: #3C3B6E;
+      margin-top: 2vh;
+      width: 55%;
+      height: 13%;
+      border-radius: 12px;
+      text-shadow: none;
+      border: none;
+      box-shadow: none; }
+
+.party-boxes {
+  width: 100%;
+  height: 20vh;
+  position: relative; }
+  .party-boxes #blue, .party-boxes #red {
+    height: 100%;
+    width: 43%;
+    border-radius: 25px;
+    display: table;
+    text-align: center; }
+    .party-boxes #blue h1, .party-boxes #red h1 {
+      color: white;
+      font-size: 12vh;
+      display: table-cell;
+      vertical-align: middle; }
+  .party-boxes #blue {
+    margin-left: 2vh;
+    float: left;
+    background-color: #3C3B6E; }
+  .party-boxes #red {
+    margin-right: 2vh;
+    float: right;
+    background-color: #B22234; }
+
+.project-info {
+  padding: 0 2vh;
+  padding-top: 2vh;
+  text-align: center; }
+  .project-info h1 {
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 auto; }
+  .project-info p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 24px; }
 
 /*# sourceMappingURL=style.css.map */
