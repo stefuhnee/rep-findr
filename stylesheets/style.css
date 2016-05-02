@@ -48,6 +48,27 @@ main {
   width: 100%;
   z-index: -1; }
 
+#about {
+  width: 100%; }
+  #about .outside {
+    margin: 0 auto;
+    width: 90%; }
+    #about .outside .inside {
+      width: 49%;
+      text-align: center;
+      outline: 1px solid blue;
+      display: inline-block; }
+      #about .outside .inside h1 {
+        margin: 1vh auto;
+        font-size: 5vh; }
+      #about .outside .inside .img-placeholder {
+        margin: 0 auto;
+        margin-top: 2vh;
+        background-color: #3C3B6E;
+        width: 15vh;
+        height: 15vh;
+        border-radius: 50%; }
+
 footer nav {
   display: table;
   height: 60px;
@@ -80,6 +101,10 @@ footer nav {
   outline: 1px solid black;
   position: relative; }
   .main-input div {
+    background-image: url("http://cdn.fansided.com/wp-content/blogs.dir/276/files/2014/07/murica-eagle-2013-850x560.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: table-cell;
     vertical-align: middle;
     width: 100%;

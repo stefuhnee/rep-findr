@@ -1,0 +1,29 @@
+#about {
+  width: 100%;
+
+  .outside {
+    margin: 0 auto;
+    width: 90%;
+
+    .inside {
+      width: 49%;
+      text-align: center;
+      outline: 1px solid blue;
+      display: inline-block;
+
+      h1 {
+        margin: 1vh auto;
+        font-size: 5vh;
+      }
+
+      .img-placeholder {
+        margin: 0 auto;
+        margin-top: 2vh;
+        background-color: $blue;
+        width: 15vh;
+        height: 15vh;
+        border-radius:50%;
+      }
+    }
+  }
+}
