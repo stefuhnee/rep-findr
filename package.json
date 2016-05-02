@@ -9,6 +9,7 @@
   "author": "Code Fellows",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^2.0.0",
     "express": "^4.13.3",
     "googleapis": "^5.2.1",
     "twitter": "1.2.5"

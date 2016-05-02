@@ -1,4 +1,5 @@
 var express = require('express');
+require('dotenv').config();
 var app = express();
 
 app.get('/', function (req, res) {
@@ -12,10 +13,10 @@ app.listen(3000, function () {
 var Twitter = require('twitter');
 
 var client = new Twitter({
-  consumer_key: $TWITTER_CONSUMER_KEY,
-  consumer_secret: $TWITTER_CONSUMER_SECRET,
-  access_token_key: $TWITTER_ACCESS_TOKEN_KEY,
-  access_token_secret: $TWITTER_ACCESS_TOKEN_SECRET,
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
 
 client.stream('statuses/filter', {track: 'republican'}, function(stream) {
@@ -27,5 +28,3 @@ client.stream('statuses/filter', {track: 'republican'}, function(stream) {
     throw error;
   });
 });
-
-client.stream();
