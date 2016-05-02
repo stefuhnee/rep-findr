@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rep Findr</title>
   <link rel="stylesheet" href="stylesheets/style.css">
+  <script id="rep-template" type="text/x-handlebars-template">
+    <article>
+      <img src="{{img-src}}">
+      <h1>{{name}}</h1>
+      <h2>{{office}}</h2>
+      <h2>{{party}}</h2>
+      <ul>
+        <li>{{address}}</li>
+        <li>{{phone}}</li>
+        <li>{{website}}</li>
+      </ul>
+      <ul>
+        <li>{{social}}</li>
+      </ul>
+    </article>
+  </script>
+
+
 
 </head>
 <body>
