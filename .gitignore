@@ -1,2 +1,4 @@
 stylesheets/.sass-cache*
 stylesheets/style.css.map
+.env
+node_modules
