@@ -6,7 +6,7 @@
   #blue, #red {
     height: 100%;
     width: 43%;
-    border-radius: 25px;
+    @include border-radius(25px);
     display: table;
     text-align: center;
 
@@ -16,16 +16,16 @@
       display: table-cell;
       vertical-align: middle;
     }
-
   }
 
   #blue {
-    margin-left: 2vh;
+    margin-left: $gutter;
     float: left;
     background-color: $blue;
   }
+
   #red {
-    margin-right: 2vh;
+    margin-right: $gutter;
     float: right;
     background-color: $red;
   }
