@@ -42,13 +42,14 @@
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
   };
 
-  civicDataAPI.requestMap = function (boxAddress) {
-    geocoder.geocode( { 'address': boxAddress}, function(results, status) {
+  civicDataAPI.requestMap = function (pollAddress, pollTitle) {
+    geocoder.geocode( { 'address': pollAddress}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         map.setCenter(results[0].geometry.location);
         var marker = new google.maps.Marker({
           map: map,
-          position: results[0].geometry.location
+          position: results[0].geometry.location,
+          title: 'Your dropbox location is: ' + pollTitle + ' ' + pollAddress
         });
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
@@ -63,8 +64,9 @@
       civicDataAPI.dropbox = data;
       // console.table(civicDataAPI.dropbox);
       var pollAddress = civicDataAPI.dropbox.dropOffLocations[0].address.line1 + ' ' + civicDataAPI.dropbox.dropOffLocations[0].address.city + ' ' + civicDataAPI.dropbox.dropOffLocations[0].address.state + ' ' + civicDataAPI.dropbox.dropOffLocations[0].address.zip;
+      var pollTitle = civicDataAPI.dropbox.dropOffLocations[0].name;
       console.log(pollAddress);
-      civicDataAPI.requestMap(pollAddress);
+      civicDataAPI.requestMap(pollAddress, pollTitle);
     });
   };
 
