@@ -27,6 +27,7 @@
     } else {
       civicDataAPI.officialArray.push(new Official(officials[0].name, office[0].name, officials[0].address, officials[0].party, officials[0].phones[0], officials[0].photoUrl));
     };
+    repView.displayReps(civicDataAPI.officialArray);
   };
 
   var geocoder;
