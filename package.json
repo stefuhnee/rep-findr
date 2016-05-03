@@ -4,6 +4,7 @@
   "description": "## READ ME",
   "main": "server.js",
   "dependencies": {
+    "firebase": "^2.4.2",
     "twitter": "^1.2.5"
   },
   "devDependencies": {},
