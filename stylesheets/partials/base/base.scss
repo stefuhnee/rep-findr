@@ -3,6 +3,7 @@ body {
   margin: 0 auto;
   position: relative;
   font-family: $base-font;
+  z-index: -1;
 }
 
 p {
