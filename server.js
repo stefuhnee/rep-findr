@@ -1,6 +1,7 @@
 var express = require('express'),
   port = process.env.PORT || 3000,
-  app = express();
+  app = express(),
+  firebase = require('firebase');
 
 app.use(express.static('./'));
 
