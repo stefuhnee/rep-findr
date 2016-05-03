@@ -49,7 +49,8 @@
         var marker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location,
-          title: 'Your dropbox location is: ' + pollTitle + ' ' + pollAddress
+          title: 'Your dropbox location is: ' + pollTitle + ' ' + pollAddress,
+          animation: google.maps.Animation.DROP
         });
       } else {
         alert('Geocode was not successful for the following reason: ' + status);
