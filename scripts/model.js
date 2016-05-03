@@ -50,5 +50,14 @@
     });
   }
 
+  civicDataAPI.requestDropBox = function(userAddress) {console.log(userAddress);
+    $.get('https://www.googleapis.com/civicinfo/v2/voterinfo?address=' + userAddress + '&fields=dropOffLocations&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
+    .done(function(data) {
+      civicDataAPI.dropbox = data;
+      console.table(civicDataAPI.dropbox);
+    });
+  };
+
+
   module.civicDataAPI = civicDataAPI;
 })(window);

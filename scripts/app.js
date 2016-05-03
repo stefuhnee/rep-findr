@@ -26,7 +26,8 @@
   addressController.loadReps = function(ctx, next){
 
     civicDataAPI.requestData(ctx.params.address, 'legislatorUpperBody');
-  }
+    civicDataAPI.requestDropBox(ctx.params.address);
+  };
 
   addressController.handleUserAddress();
 
