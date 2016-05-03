@@ -24,10 +24,10 @@
 
 
   addressController.loadReps = function(ctx, next){
-
+    civicDataAPI.officialArray = [];
+    civicDataAPI.requestData(ctx.params.address, 'administrativeArea1', 'headOfGovernment');
     civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorUpperBody');
     civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorLowerBody');
-    civicDataAPI.requestData(ctx.params.address, 'administrativeArea1', 'headOfGovernment');
   };
 
   addressController.handleUserAddress();

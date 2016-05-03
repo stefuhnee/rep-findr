@@ -3,8 +3,9 @@
   // var civicData = {};
   civicDataAPI.info = {};
   civicDataAPI.officialArray = [];
-  function Official(name, address, party, phone, photoURL) {
+  function Official(name, office, address, party, phone, photoURL) {
     this.name = name;
+    this.office = office;
     this.address = address;
     this.party = party;
     this.phone = phone;
@@ -21,10 +22,10 @@
     var office = data.offices;
     if (officials.length > 1) {
       for (var i = 0; i < officials.length; i++) {
-        civicDataAPI.officialArray.push(new Official(officials[i].name, officials[i].address, officials[i].party, officials[i].phones[0], officials[i].photoUrl));
+        civicDataAPI.officialArray.push(new Official(officials[i].name, office[0].name, officials[i].address, officials[i].party, officials[i].phones[0], officials[i].photoUrl));
       };
     } else {
-      civicDataAPI.officialArray.push(new Official(officials[0].name, officials[0].address, officials[0].party, officials[0].phones[0], officials[0].photoUrl));
+      civicDataAPI.officialArray.push(new Official(officials[0].name, office[0].name, officials[0].address, officials[0].party, officials[0].phones[0], officials[0].photoUrl));
     };
   };
 
