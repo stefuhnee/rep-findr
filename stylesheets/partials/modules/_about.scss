@@ -1,0 +1,38 @@
+#about {
+  width: 100%;
+  margin-top: $gutter;
+
+  .outside {
+    margin: 0 auto;
+    width: 100%;
+
+    .inside {
+      @include box-sizing(border-box);
+      padding: $gutter;
+      width: 50%;
+      text-align: center;
+      float:left;
+      display: inline-block;
+
+      h1 {
+        margin: $gutter auto;
+        font-size: 4vh;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: $gutter;
+        line-height: 24px;
+      }
+
+      .img-placeholder {
+        margin: 0 auto;
+        margin-top: $gutter;
+        background-color: $blue;
+        width: 16vh;
+        height: 16vh;
+        @include border-radius(50%);
+      }
+    }
+  }
+}

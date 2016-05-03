@@ -1,0 +1,198 @@
+@import url(../vendor/styles/normalize.css);
+@import url(../vendor/styles/jquery-ui.min.css);
+@import url(../vendor/styles/jquery-ui.structure.min.css);
+@import url(../vendor/styles/jquery-ui.theme.min.css);
+@import url(../vendor/styles/icons.css);
+body {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  font-family: Helvetica;
+  z-index: -1; }
+
+#map {
+  height: 500px;
+  max-width: 500px; }
+
+p {
+  font-size: 3vh; }
+
+a {
+  text-decoration: none; }
+
+.clearfix {
+  clear: both; }
+
+footer {
+  height: 60px;
+  background-color: #B22234;
+  position: relative;
+  top: 60px;
+  margin-top: 3vh; }
+
+header {
+  background-color: #D6D6D6;
+  position: fixed;
+  z-index: 50;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  display: table; }
+  header h1 {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-style: italic;
+    font-size: 6vh; }
+    header h1 #d {
+      color: #3C3B6E; }
+    header h1 #r {
+      color: #B22234; }
+
+main {
+  background-color: white;
+  position: relative;
+  top: 60px;
+  width: 100%;
+  z-index: -1; }
+
+#about {
+  width: 100%;
+  margin-top: 2vh; }
+  #about .outside {
+    margin: 0 auto;
+    width: 100%; }
+    #about .outside .inside {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 2vh;
+      width: 50%;
+      text-align: center;
+      float: left;
+      display: inline-block; }
+      #about .outside .inside h1 {
+        margin: 2vh auto;
+        font-size: 4vh; }
+      #about .outside .inside p {
+        margin-top: 0;
+        margin-bottom: 2vh;
+        line-height: 24px; }
+      #about .outside .inside .img-placeholder {
+        margin: 0 auto;
+        margin-top: 2vh;
+        background-color: #3C3B6E;
+        width: 16vh;
+        height: 16vh;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+
+footer nav {
+  display: table;
+  height: 60px;
+  margin: 0 auto;
+  width: 100%; }
+  footer nav ul {
+    list-style: none;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding: 0 2vh;
+    margin: 0;
+    text-align: center; }
+    footer nav ul a {
+      color: white; }
+    footer nav ul :nth-child(1) {
+      float: left; }
+    footer nav ul :nth-child(2) a {
+      padding: 0 1vh; }
+    footer nav ul :nth-child(3) {
+      float: right; }
+    footer nav ul li {
+      display: inline-block;
+      font-size: 4vh; }
+
+.main-input {
+  display: table;
+  height: 50vh;
+  width: 100%;
+  outline: 1px solid black;
+  position: relative; }
+  .main-input div {
+    background-image: url("http://cdn.fansided.com/wp-content/blogs.dir/276/files/2014/07/murica-eagle-2013-850x560.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center; }
+    .main-input div input {
+      font-size: 3vh;
+      color: #D6D6D6;
+      text-align: center;
+      width: 75%;
+      height: 13%;
+      box-shadow: 1px 2px 6px #53585F; }
+    .main-input div button {
+      color: white;
+      font-size: 3vh;
+      background-color: #3C3B6E;
+      margin-top: 2vh;
+      width: 55%;
+      height: 13%;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      border-radius: 12px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -ms-box-shadow: none;
+      box-shadow: none;
+      text-shadow: none;
+      border: none; }
+
+.party-boxes {
+  width: 100%;
+  height: 20vh;
+  position: relative; }
+  .party-boxes #blue, .party-boxes #red {
+    height: 100%;
+    width: 43%;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    display: table;
+    text-align: center; }
+    .party-boxes #blue h1, .party-boxes #red h1 {
+      color: white;
+      font-size: 12vh;
+      display: table-cell;
+      vertical-align: middle; }
+  .party-boxes #blue {
+    margin-left: 2vh;
+    float: left;
+    background-color: #3C3B6E; }
+  .party-boxes #red {
+    margin-right: 2vh;
+    float: right;
+    background-color: #B22234; }
+
+.project-info {
+  padding: 0 2vh;
+  padding-top: 2vh;
+  text-align: center;
+  position: relative; }
+  .project-info h1 {
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 auto; }
+  .project-info p {
+    text-align: justify;
+    line-height: 24px; }
+
+/*# sourceMappingURL=style.css.map */

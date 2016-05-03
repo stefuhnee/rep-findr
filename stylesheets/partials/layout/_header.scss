@@ -1,0 +1,27 @@
+header {
+  background-color: $light-grey;
+  position: fixed;
+  z-index: 50;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  display: table;
+
+  h1 {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-style: italic;
+    font-size: 6vh;
+
+    #d {
+      color: $blue;
+    }
+
+    #r {
+      color: $red;
+    }
+
+  }
+
+}

@@ -1,0 +1,17 @@
+.project-info {
+  padding: 0 $gutter;
+  padding-top: $gutter;
+  text-align: center;
+  position: relative;
+
+  h1 {
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 24px;
+  }
+}

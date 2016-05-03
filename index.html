@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rep Findr</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script id="rep-template" type="text/x-handlebars-template">
+    <article>
+      <img src="{{img-src}}">
+      <h1>{{name}}</h1>
+      <h2>{{office}}</h2>
+      <h2>{{party}}</h2>
+      <ul>
+        <li>{{phone}}</li>
+        <li>{{address.0.line1}} {{address.0.city}}, {{address.0.state}} {{address.0.zip}}</li>
+      </ul>
+    </article>
+  </script>
+
+
+
+</head>
+<body>
+  <header>
+    <h1>RepFin<span id='d'>d</span><span id='r'>r</span></h1>
+  </header>
+
+
+
+  <main>
+    <section class="main-input">
+      <div>
+        <input type="text" name="userProvidedAddress" placeholder="Enter your address here">
+        <button class="rep-findr">Find your rep!</button>
+      </div>
+    </section>
+
+    <section class="project-info">
+      <h1>Why Should You Use RepFindr?</h1>
+      <p>If you are like us, you've probably spent much of your adult life oblivious to the comings and goings of your elected representatives. Who is your Congressman? Who are your Senators? Your Mayor? Governor?</p>
+      <p>RepFindr will help you track down your elected officials, find their contact info, and see if their voting records match up with your interests.</p>
+    </section>
+
+    <section class="party-boxes">
+      <div id="blue"><h1>D</h1></div>
+      <div id="red"><h1>R</h1></div>
+      <div class="clearfix"></div>
+    </section>
+    <section id="rep-list">
+    </section>
+    <section id="map"><p>Map will go here</p></section>
+    <!-- Placeholder to test map -->
+
+    <section id="about">
+      <div class="outside">
+        <div class="inside">
+          <div class="img-placeholder"></div>
+          <h1>Stefanie</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="inside">
+          <div class="img-placeholder"></div>
+          <h1>Chris</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="outside">
+        <div class="inside">
+          <div class="img-placeholder"></div>
+          <h1>Matt</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="inside">
+          <div class="img-placeholder"></div>
+          <h1>Jeff</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="clearfix">
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li class="clearfix">
+          <a href="#" class="icon-facebook2"></a>
+          <a href="#" class="icon-mail4"></a>
+          <a href="#" class="icon-twitter"></a>
+        </li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
+  <script src="vendor/scripts/jquery-ui.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDZ4SEKlLpCmZ3SXBySjzNBnzn1-iF2po"></script>
+  <script src="vendor/scripts/handlebars.js"></script>
+  <script src="vendor/scripts/page.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/repView.js"></script>
+  <script src="scripts/model.js"></script>
+  <script src="scripts/routes.js"></script>
+</body>
+
+</html>
