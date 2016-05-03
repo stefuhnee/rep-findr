@@ -1,0 +1,25 @@
+{
+  "name": "rep-findr",
+  "version": "1.0.0",
+  "description": "## READ ME",
+  "main": "server.js",
+  "dependencies": {
+    "firebase": "^2.4.2",
+    "twitter": "^1.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefuhnee/rep-findr.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/stefuhnee/rep-findr/issues"
+  },
+  "homepage": "https://github.com/stefuhnee/rep-findr#readme"
+}
