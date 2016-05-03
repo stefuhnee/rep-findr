@@ -1,26 +1,31 @@
 (function(module) {
   var civicDataAPI = {};
   // var civicData = {};
-
   civicDataAPI.info = {};
-
-  function Official(data) {
-    var sen1 = data.officials[0];
-    var sen2 = data.officials[1];
-    this.name1 = sen1.name;
-    this.address1 = sen1.address[0];
-    this.phone1 = sen1.phones[0];
-    this.name2 = sen2.name;
-    this.address2 = sen2.address[0];
-    this.phone2 = sen2.phones[0];
+  civicDataAPI.officialArray = [];
+  function Official(name, address, party, phone, photoURL) {
+    this.name = name;
+    this.address = address;
+    this.party = party;
+    this.phone = phone;
+    this.photoURL = photoURL;
   }
-
-  civicDataAPI.requestData = function(userAddress, official) {
-    $.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + userAddress + '&includeOffices=true&levels=country&roles=' + official + '&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
+  civicDataAPI.requestData = function(userAddress, level, official) {
+    $.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + userAddress + '&includeOffices=true&levels=' + level + '&roles=' + official + '&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
     .done(function(data) {
-      civicDataAPI.info = new Official(data);
-      console.table(civicDataAPI.info);
+      civicDataAPI.handleData(data);
     });
+  };
+  civicDataAPI.handleData = function(data) {
+    var officials = data.officials;
+    var office = data.offices;
+    if (officials.length > 1) {
+      for (var i = 0; i < officials.length; i++) {
+        civicDataAPI.officialArray.push(new Official(officials[i].name, officials[i].address, officials[i].party, officials[i].phones[0], officials[i].photoUrl));
+      };
+    } else {
+      civicDataAPI.officialArray.push(new Official(officials[0].name, officials[0].address, officials[0].party, officials[0].phones[0], officials[0].photoUrl));
+    };
   };
 
   var geocoder;

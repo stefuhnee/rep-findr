@@ -25,8 +25,10 @@
 
   addressController.loadReps = function(ctx, next){
 
-    civicDataAPI.requestData(ctx.params.address, 'legislatorUpperBody');
-  }
+    civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorUpperBody');
+    civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorLowerBody');
+    civicDataAPI.requestData(ctx.params.address, 'administrativeArea1', 'headOfGovernment');
+  };
 
   addressController.handleUserAddress();
 
