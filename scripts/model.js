@@ -43,6 +43,8 @@
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
   };
 
+  civicDataAPI.initialize();
+
   civicDataAPI.requestMap = function (pollAddress, pollTitle) {
     geocoder.geocode( { 'address': pollAddress}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
