@@ -11,11 +11,20 @@
 
   addressController.handleUserAddress = function(){
     $('.rep-findr').on('click', $addressInputEl, function(){
-      userAddress = $addressInputEl.val();
+      userAddress = $addressInputEl.val().replace(/\s/g, '+');
       console.log('I was clicked');
-      civicDataAPI.requestData(userAddress, 'legislatorUpperBody');
+      console.log(userAddress);
+      page('/reps/' + userAddress);
+
     });
   };
+
+
+
+  addressController.loadReps = function(ctx, next){
+
+    civicDataAPI.requestData(ctx.params.address, 'legislatorUpperBody');
+  }
 
   addressController.handleUserAddress();
 
