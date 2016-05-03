@@ -38,9 +38,9 @@
     var mapOptions = {
       zoom: 8,
       center: latlng
-    }
+    };
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
-  }
+  };
 
   civicDataAPI.requestMap = function () {
     geocoder.geocode( { 'address': userAddress}, function(results, status) {
@@ -51,10 +51,18 @@
           position: results[0].geometry.location
         });
       } else {
-        alert("Geocode was not successful for the following reason: " + status);
+        alert('Geocode was not successful for the following reason: ' + status);
       }
     });
-  }
+  };
+
+  civicDataAPI.requestDropBox = function(userAddress) {console.log(userAddress);
+    $.get('https://www.googleapis.com/civicinfo/v2/voterinfo?address=' + userAddress + '&fields=dropOffLocations&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
+    .done(function(data) {
+      civicDataAPI.dropbox = data;
+      console.table(civicDataAPI.dropbox);
+    });
+  };
 
   module.civicDataAPI = civicDataAPI;
 })(window);
