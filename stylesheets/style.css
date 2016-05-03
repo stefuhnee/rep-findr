@@ -7,7 +7,12 @@ body {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  font-family: Helvetica; }
+  font-family: Helvetica;
+  z-index: -1; }
+
+#map {
+  height: 100%;
+  max-width: 100%; }
 
 p {
   font-size: 3vh; }
