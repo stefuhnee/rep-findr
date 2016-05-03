@@ -15,7 +15,9 @@
       console.log('I was clicked');
       console.log(userAddress);
       page('/reps/' + userAddress);
-
+      // civicDataAPI.initialize();
+      // civicDataAPI.requestMap(userAddress);
+      //mapfunction called here with userAddress passed in
     });
   };
 
