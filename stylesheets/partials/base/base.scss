@@ -6,6 +6,11 @@ body {
   z-index: -1;
 }
 
+#map {
+  height: 500px;
+  max-width: 500px;
+}
+
 p {
   font-size: 3vh;
 }
