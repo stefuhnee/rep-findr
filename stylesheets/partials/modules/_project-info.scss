@@ -1,6 +1,6 @@
 .project-info {
-  padding: 0 2vh;
-  padding-top: 2vh;
+  padding: 0 $gutter;
+  padding-top: $gutter;
   text-align: center;
   position: relative;
 
@@ -11,7 +11,6 @@
   }
 
   p {
-    font-size: 18px;
     text-align: justify;
     line-height: 24px;
   }

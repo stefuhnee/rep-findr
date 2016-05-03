@@ -9,6 +9,9 @@ body {
   position: relative;
   font-family: Helvetica; }
 
+p {
+  font-size: 3vh; }
+
 a {
   text-decoration: none; }
 
@@ -49,24 +52,37 @@ main {
   z-index: -1; }
 
 #about {
-  width: 100%; }
+  width: 100%;
+  margin-top: 2vh; }
   #about .outside {
     margin: 0 auto;
-    width: 90%; }
+    width: 100%; }
     #about .outside .inside {
-      width: 49%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 2vh;
+      width: 50%;
       text-align: center;
-      outline: 1px solid blue;
+      float: left;
       display: inline-block; }
       #about .outside .inside h1 {
-        margin: 1vh auto;
-        font-size: 5vh; }
+        margin: 2vh auto;
+        font-size: 4vh; }
+      #about .outside .inside p {
+        margin-top: 0;
+        margin-bottom: 2vh;
+        line-height: 24px; }
       #about .outside .inside .img-placeholder {
         margin: 0 auto;
         margin-top: 2vh;
         background-color: #3C3B6E;
-        width: 15vh;
-        height: 15vh;
+        width: 16vh;
+        height: 16vh;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
         border-radius: 50%; }
 
 footer nav {
@@ -79,7 +95,7 @@ footer nav {
     display: table-cell;
     vertical-align: middle;
     width: 100%;
-    padding: 0 3vh;
+    padding: 0 2vh;
     margin: 0;
     text-align: center; }
     footer nav ul a {
@@ -87,12 +103,12 @@ footer nav {
     footer nav ul :nth-child(1) {
       float: left; }
     footer nav ul :nth-child(2) a {
-      padding: 0 1vmin; }
+      padding: 0 1vh; }
     footer nav ul :nth-child(3) {
       float: right; }
     footer nav ul li {
       display: inline-block;
-      font-size: 6vmin; }
+      font-size: 4vh; }
 
 .main-input {
   display: table;
@@ -123,10 +139,16 @@ footer nav {
       margin-top: 2vh;
       width: 55%;
       height: 13%;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
       border-radius: 12px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -ms-box-shadow: none;
+      box-shadow: none;
       text-shadow: none;
-      border: none;
-      box-shadow: none; }
+      border: none; }
 
 .party-boxes {
   width: 100%;
@@ -135,6 +157,9 @@ footer nav {
   .party-boxes #blue, .party-boxes #red {
     height: 100%;
     width: 43%;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
     border-radius: 25px;
     display: table;
     text-align: center; }
@@ -162,7 +187,6 @@ footer nav {
     display: inline-block;
     margin: 0 auto; }
   .project-info p {
-    font-size: 18px;
     text-align: justify;
     line-height: 24px; }
 

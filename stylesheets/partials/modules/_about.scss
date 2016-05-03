@@ -1,28 +1,37 @@
 #about {
   width: 100%;
+  margin-top: $gutter;
 
   .outside {
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
 
     .inside {
-      width: 49%;
+      @include box-sizing(border-box);
+      padding: $gutter;
+      width: 50%;
       text-align: center;
-      outline: 1px solid blue;
+      float:left;
       display: inline-block;
 
       h1 {
-        margin: 1vh auto;
-        font-size: 5vh;
+        margin: $gutter auto;
+        font-size: 4vh;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: $gutter;
+        line-height: 24px;
       }
 
       .img-placeholder {
         margin: 0 auto;
-        margin-top: 2vh;
+        margin-top: $gutter;
         background-color: $blue;
-        width: 15vh;
-        height: 15vh;
-        border-radius:50%;
+        width: 16vh;
+        height: 16vh;
+        @include border-radius(50%);
       }
     }
   }

@@ -28,13 +28,13 @@
       color: white;
       font-size: 3vh;
       background-color: $blue;
-      margin-top: 2vh;
+      margin-top: $gutter;
       width: 55%;
       height: 13%;
-      border-radius: 12px;
+      @include border-radius(12px);
+      @include box-shadow(none);
       text-shadow:none;
       border:none;
-      box-shadow:none;
     }
   }
 }
