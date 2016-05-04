@@ -1,6 +1,6 @@
 page('/', landingPageController.initLandingPage);
 
-page('/reps/:address', officialsPageController.loadReps, officialsPageController.initReps);
+page('/reps/:address', officialsPageController.loadReps, officialsPageController.loadMap);
 
 //page('/about', fuckyou);
 

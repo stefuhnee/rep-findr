@@ -16,12 +16,11 @@
   civicDataAPI.requestData = function(userAddress, level, official) {
     $.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + userAddress + '&includeOffices=true&levels=' + level + '&roles=' + official + '&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
     .done(function(data) {
-      civicDataAPI.officialArray.push(data);
+      civicDataAPI.handleData(data);
     });
   };
 
-  civicDataAPI.handleData = function() {
-    var data = civicDataAPI.officialArray;
+  civicDataAPI.handleData = function(data) {
     var officials = data.officials;
     var office = data.offices;
     officials.forEach(function(official) {
@@ -29,9 +28,9 @@
         acc[cur.type] = cur.id;
         return acc;
       }, {});
-      data.push(new Official(official.name, office[0].name, official.address, official.party, official.phones[0], official.photoUrl, social));
+      civicDataAPI.officialArray.push(new Official(official.name, office[0].name, official.address, official.party, official.phones[0], official.photoUrl, social));
     });
-    return data;
+    officialsPageView.displayReps(civicDataAPI.officialArray);
   };
 
   module.civicDataAPI = civicDataAPI;

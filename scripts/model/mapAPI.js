@@ -13,8 +13,6 @@
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
   };
 
-  mapAPI.initialize();
-
   mapAPI.requestMap = function (pollAddress, pollTitle) {
     geocoder.geocode( { 'address': pollAddress}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {

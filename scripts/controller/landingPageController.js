@@ -2,7 +2,7 @@
   var landingPageController = {};
 
   landingPageController.initLandingPage = function(){
-    console.log('Hi. It is I... initLandingPage');
+    // console.log('Hi. It is I... initLandingPage');
     landingPageView.handleUserAddress();
   };
 

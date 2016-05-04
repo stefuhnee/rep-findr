@@ -7,12 +7,16 @@
     civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorUpperBody');
     civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorLowerBody');
     next();
-    //mapAPI.requestDropBox(ctx.params.address);
   };
 
-  officialsPageController.initRepsPage = function(){
-    officialsPageView.displayReps(civicDataAPI.handleData);
+  officialsPageController.loadMap = function(ctx){
+    mapAPI.initialize();
+    mapAPI.requestDropBox(ctx.params.address);
   }
+
+  // officialsPageController.initRepsPage = function(){
+  //   officialsPageView.displayReps(civicDataAPI.handleData);
+  // };
 
 
 
