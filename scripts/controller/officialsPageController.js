@@ -6,6 +6,7 @@
     civicDataAPI.requestData(ctx.params.address, 'administrativeArea1', 'headOfGovernment');
     civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorUpperBody');
     civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorLowerBody');
+    landingPageView.checkLocalStorage();
     next();
   };
 
