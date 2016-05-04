@@ -3,3 +3,4 @@ stylesheets/style.css.map
 node_modules
 vendor/styles/.DS_Store
 .DS_Store
+env.sh
