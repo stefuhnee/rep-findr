@@ -13,8 +13,11 @@
   landingPageView.handleUserAddress = function(){
     $('.rep-findr').on('click', $addressInputEl, function(){
       userAddress = $addressInputEl.val().replace(/\s/g, '+');
-      console.log('I was clicked');
       console.log(userAddress);
+      zipCode = userAddress.split('+').pop();
+      zipObject = {'user zipcode': zipCode};
+      dataBase.myDataBaseRef.push(zipObject);
+      console.log(zipCode);
       page('/reps/' + userAddress);
       // civicDataAPI.initialize();
       // civicDataAPI.requestMap(userAddress);
