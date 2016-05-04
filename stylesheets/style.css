@@ -157,7 +157,9 @@ footer nav {
       border: none; }
 
 .modal {
-  display: none; }
+  display: none;
+  width: 85%;
+  margin: 0 auto; }
 
 a.Republican-color {
   color: #B22234; }
