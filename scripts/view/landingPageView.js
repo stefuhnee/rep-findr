@@ -16,5 +16,12 @@
     });
   };
 
+  landingPageView.checkLocalStorage = function() {
+    if (!localStorage.returned) {
+      $('a[href="#first-time-modal"]').click();
+      localStorage.returned = true;
+    }
+  };
+
   module.landingPageView = landingPageView;
 })(window);
