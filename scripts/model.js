@@ -76,5 +76,8 @@
     });
   };
 
+  civicDataAPI.myDataBaseRef = new Firebase('https://rep-findr.firebaseio.com/');
+
+
   module.civicDataAPI = civicDataAPI;
 })(window);
