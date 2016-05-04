@@ -11,6 +11,7 @@
     this.phone = phone;
     this.photoURL = photoURL;
     this.social = social;
+    this.handlebarsID = this.name.split(/\s/g).join('-');
   }
 
   civicDataAPI.requestData = function(userAddress, level, official) {
