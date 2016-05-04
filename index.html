@@ -5,20 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rep Findr</title>
   <link rel="stylesheet" href="stylesheets/style.css">
+
+
+
   <script id="rep-template" type="text/x-handlebars-template">
     <article>
       <img src="{{img-src}}">
-      <h1>{{name}}</h1>
+      <a href="#{{handlebarsID}}" rel="modal:open" class="{{party}}-color"><h1>{{name}}</h1></a>
       <h2>{{office}}</h2>
-      <h2>{{party}}</h2>
-      <ul>
-        <li>{{phone}}</li>
-        <li>{{address.0.line1}} {{address.0.city}}, {{address.0.state}} {{address.0.zip}}</li>
-      </ul>
+
+      <div class="modal" id="{{handlebarsID}}">
+        <img src="{{img-src}}">
+        <h1 class="{{party}}-color">{{name}}</h1>
+        <h2>{{office}}</h2>
+        <h2>{{party}}</h2>
+        <ul>
+          <li>{{phone}}</li>
+          <li>{{address.0.line1}} {{address.0.city}}, {{address.0.state}} {{address.0.zip}}</li>
+        </ul>
+        <h2>Social Media</h1>
+        <ul>
+          {{#if social.Facebook}}
+          <li>Facebook: <a href="http://www.facebook.com/ {{social.Facebook}}">{{social.Facebook}}</a></li>
+          {{/if}}
+          {{#if social.Twitter}}
+          <li>Twitter: <a href="http://www.twitter.com/{{social.Twitter}}">{{social.Twitter}}</a></li>
+          {{/if}}
+        </ul>
+      </div>
+
     </article>
   </script>
-
-
 
 </head>
 <body>
@@ -32,7 +49,7 @@
     <div id="landing-page">
       <section class="main-input">
         <div>
-          <input type="text" name="userProvidedAddress" placeholder="Enter your address here">
+          <input type="text" name="userProvidedAddress" placeholder="Enter your address here" value="606 156th St NE Arlington WA 98223">
           <button class="rep-findr">Find your rep!</button>
         </div>
       </section>
@@ -102,6 +119,7 @@
   </footer>
   <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
   <script src="vendor/scripts/jquery-ui.min.js"></script>
+  <script src="vendor/scripts/jquery-modal.js"></script>
   <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDZ4SEKlLpCmZ3SXBySjzNBnzn1-iF2po"></script>
   <script src="vendor/scripts/handlebars.js"></script>

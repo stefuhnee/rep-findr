@@ -3,6 +3,7 @@
 @import url(../vendor/styles/jquery-ui.structure.min.css);
 @import url(../vendor/styles/jquery-ui.theme.min.css);
 @import url(../vendor/styles/icons.css);
+@import url(../vendor/styles/jquery-modal.css);
 body {
   width: 100%;
   margin: 0 auto;
@@ -154,6 +155,20 @@ footer nav {
       box-shadow: none;
       text-shadow: none;
       border: none; }
+
+.modal {
+  display: none;
+  width: 85%;
+  margin: 0 auto; }
+
+a.Republican-color {
+  color: #B22234; }
+
+a.Democratic-color {
+  color: #3C3B6E; }
+
+a.Independent-color {
+  color: #53585F; }
 
 .party-boxes {
   width: 100%;

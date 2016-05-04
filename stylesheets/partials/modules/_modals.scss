@@ -1,0 +1,17 @@
+.modal {
+  display: none;
+  width: 85%;
+  margin: 0 auto;
+}
+
+a.Republican-color {
+  color: $red;
+}
+
+a.Democratic-color {
+  color: $blue;
+}
+
+a.Independent-color {
+  color: $dark-grey;
+}
