@@ -1,5 +1,6 @@
-(function(module) {
-  var addressController = {};
+(function (module){
+  var landingPageView = {};
+
   var userAddress;
   var $addressInputEl = $('input[name=userProvidedAddress]');
 
@@ -9,7 +10,7 @@
   //   return userAddress;
   // };
 
-  addressController.handleUserAddress = function(){
+  landingPageView.handleUserAddress = function(){
     $('.rep-findr').on('click', $addressInputEl, function(){
       userAddress = $addressInputEl.val().replace(/\s/g, '+');
       console.log('I was clicked');
@@ -21,19 +22,5 @@
     });
   };
 
-
-
-  addressController.loadReps = function(ctx, next){
-    civicDataAPI.officialArray = [];
-    //ctx.officialArray = [];
-    civicDataAPI.requestData(ctx.params.address, 'administrativeArea1', 'headOfGovernment');
-    civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorUpperBody');
-    civicDataAPI.requestData(ctx.params.address, 'country', 'legislatorLowerBody');
-
-    mapAPI.requestDropBox(ctx.params.address);
-  };
-
-  addressController.handleUserAddress();
-
-  module.addressController = addressController;
+  module.landingPageView = landingPageView;
 })(window);
