@@ -30,16 +30,21 @@
   };
 
   mapAPI.requestDropBox = function(userAddress) {
-    // console.log(userAddress);
     $.get('https://www.googleapis.com/civicinfo/v2/voterinfo?address=' + userAddress + '&fields=dropOffLocations&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
     .done(function(data) {
       mapAPI.dropbox = data;
-      // console.table(mapAPI.dropbox);
       var pollAddress = mapAPI.dropbox.dropOffLocations[0].address.line1 + ' ' + mapAPI.dropbox.dropOffLocations[0].address.city + ' ' + mapAPI.dropbox.dropOffLocations[0].address.state + ' ' + mapAPI.dropbox.dropOffLocations[0].address.zip;
       var pollTitle = mapAPI.dropbox.dropOffLocations[0].name;
       console.log(pollAddress);
       mapAPI.requestMap(pollAddress, pollTitle);
+      $('#map').show();
+    })
+    .fail(function() {
+      mapAPI.initialize();
+      $('#map').hide();
+      console.log('No map for you!');
     });
   };
+
   module.mapAPI = mapAPI;
 })(window);
