@@ -11,13 +11,12 @@
   <script id="rep-template" type="text/x-handlebars-template">
     <article>
       <img src="{{img-src}}">
-      <h1>{{name}}</h1>
+      <a href="#{{handlebarsID}}" rel="modal:open" class="{{party}}-color"><h1>{{name}}</h1></a>
       <h2>{{office}}</h2>
-      <h2>{{party}}</h2>
 
-      <div id={{handlebarsID}}>
+      <div class="modal" id="{{handlebarsID}}">
         <img src="{{img-src}}">
-        <h1>{{name}}</h1>
+        <h1 class="{{party}}-color">{{name}}</h1>
         <h2>{{office}}</h2>
         <h2>{{party}}</h2>
         <ul>
@@ -69,7 +68,6 @@
     </div>
     <!-- page with API data -->
     <div id="officials-page">
-      <div id="rep-modal"></div>
       <section id="rep-list">
       </section>
 
@@ -120,6 +118,7 @@
   </footer>
   <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
   <script src="vendor/scripts/jquery-ui.min.js"></script>
+  <script src="vendor/scripts/jquery-modal.js"></script>
   <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDZ4SEKlLpCmZ3SXBySjzNBnzn1-iF2po"></script>
   <script src="vendor/scripts/handlebars.js"></script>

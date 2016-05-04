@@ -7,9 +7,11 @@
 @import "partials/modules/about";
 @import "partials/modules/footer-nav";
 @import "partials/modules/main-input";
+@import "partials/modules/map-section";
+@import "partials/modules/modals";
 @import "partials/modules/party-boxes";
 @import "partials/modules/project-info";
-@import "partials/modules/map-section";
+
 
 // Third-Party
 @import "../vendor/styles/normalize.css";
@@ -17,3 +19,4 @@
 @import "../vendor/styles/jquery-ui.structure.min.css";
 @import "../vendor/styles/jquery-ui.theme.min.css";
 @import "../vendor/styles/icons.css";
+@import "../vendor/styles/jquery-modal.css";

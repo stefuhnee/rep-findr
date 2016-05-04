@@ -23,6 +23,15 @@
       $('#rep-list').append(render(official));
       // $('#rep-modal').append(renderModal(official));
     });
+    // $('#rep-list').on('click', 'h1', function(e) {
+    //   e.preventDefault();
+    // });
+  };
+
+  officialsPageView.modalFix = function() {
+    $('#rep-list h1').on('click', function(e) {
+      e.preventDefault();
+    });
   };
 
   module.officialsPageView = officialsPageView;
