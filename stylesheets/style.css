@@ -120,12 +120,11 @@ footer nav {
   display: table;
   height: 50vh;
   width: 100%;
-  outline: 1px solid black;
   position: relative; }
   .main-input div {
-    background-image: url("http://cdn.fansided.com/wp-content/blogs.dir/276/files/2014/07/murica-eagle-2013-850x560.jpg");
+    background-image: url("/img/murica5.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: auto;
     background-repeat: no-repeat;
     display: table-cell;
     vertical-align: middle;
@@ -223,13 +222,20 @@ a.Independent-color, h1.Independent-color {
   position: relative; }
   .party-boxes #blue, .party-boxes #red {
     height: 100%;
-    width: 43%;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     border-radius: 25px;
     display: table;
-    text-align: center; }
+    text-align: center;
+    bottom: 0;
+    max-width: 43%; }
+    @media screen and (min-width: 768px) {
+      .party-boxes #blue, .party-boxes #red {
+        max-width: 30%; } }
+    @media screen and (min-width: 960px) {
+      .party-boxes #blue, .party-boxes #red {
+        max-width: 25%; } }
     .party-boxes #blue h1, .party-boxes #red h1 {
       color: white;
       font-size: 12vh;
@@ -237,12 +243,16 @@ a.Independent-color, h1.Independent-color {
       vertical-align: middle; }
   .party-boxes #blue {
     margin-left: 2vh;
-    float: left;
-    background-color: #3C3B6E; }
+    float: left; }
+    @media screen and (min-width: 960px) {
+      .party-boxes #blue {
+        margin-left: 20vh; } }
   .party-boxes #red {
     margin-right: 2vh;
-    float: right;
-    background-color: #B22234; }
+    float: right; }
+    @media screen and (min-width: 960px) {
+      .party-boxes #red {
+        margin-right: 20vh; } }
 
 .project-info {
   padding: 0 2vh;
