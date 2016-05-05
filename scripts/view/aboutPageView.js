@@ -1,8 +1,9 @@
 (function (module){
   var aboutPageView = {};
-  aboutPageView.showPage = function() {
-    $('#officials-page').hide();
-    $('#about').show();
+
+  aboutPageView.showAboutPage = function() {
+    $('.page').hide();
+    $('#about-page').show();
   };
 
   module.aboutPageView = aboutPageView;

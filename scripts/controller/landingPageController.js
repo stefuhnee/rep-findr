@@ -2,9 +2,7 @@
   var landingPageController = {};
 
   landingPageController.initLandingPage = function(){
-    $('#officials-page').show();
-    $('#about').hide();
-    // $('#map').hide();
+    landingPageView.showLandingPage();
     landingPageView.handleUserAddress();
   };
 
