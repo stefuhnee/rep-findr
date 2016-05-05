@@ -12,7 +12,7 @@
     this.phone = phone;
     this.photoURL = photoURL;
     this.social = social;
-    this.handlebarsID = this.name.split(/\s/g).join('-');
+    this.handlebarsID = this.name.replace(/[^a-z]+/ig, '');
   }
 
   civicDataAPI.requestData = function(userAddress, level, official) {
