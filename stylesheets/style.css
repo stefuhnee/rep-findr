@@ -135,15 +135,25 @@ footer nav {
       font-size: 3vh;
       color: #D6D6D6;
       text-align: center;
-      width: 75%;
+      width: 150px;
       height: 13%;
       box-shadow: 1px 2px 6px #53585F; }
+      @media only screen and (min-width: 375px) {
+        .main-input div input {
+          width: 300px; } }
+      @media only screen and (min-width: 768px) {
+        .main-input div input {
+          width: 500px; } }
+      @media only screen and (min-width: 960px) {
+        .main-input div input {
+          width: 700px; } }
     .main-input div button {
       color: white;
       font-size: 3vh;
       background-color: #3C3B6E;
+      margin: 0 auto;
       margin-top: 2vh;
-      width: 55%;
+      width: 150px;
       height: 13%;
       -webkit-border-radius: 12px;
       -moz-border-radius: 12px;
@@ -154,7 +164,17 @@ footer nav {
       -ms-box-shadow: none;
       box-shadow: none;
       text-shadow: none;
+      display: block;
       border: none; }
+      @media only screen and (min-width: 375px) {
+        .main-input div button {
+          width: 300px; } }
+      @media only screen and (min-width: 768px) {
+        .main-input div button {
+          width: 500px; } }
+      @media only screen and (min-width: 960px) {
+        .main-input div button {
+          width: 700px; } }
 
 #map {
   width: 75%;
