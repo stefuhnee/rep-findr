@@ -8,6 +8,7 @@
 
   officialsPageView.showOfficialsPage = function() {
     $('.page').hide();
+    $('#rep-list').empty();
     $('#officials-page').show();
   };
 
