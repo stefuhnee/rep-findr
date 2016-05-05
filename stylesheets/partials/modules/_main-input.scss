@@ -19,22 +19,42 @@
       font-size: 3vh;
       color: $light-grey;
       text-align: center;
-      width: 75%;
+      width: 150px;
       height: 13%;
       box-shadow: 1px 2px 6px $dark-grey;
+        @media only screen and (min-width: 375px) {
+          width: 300px;
+        }
+        @media only screen and (min-width: 768px) {
+          width: 500px;
+        }
+        @media only screen and (min-width: 960px) {
+          width: 700px;
+        }
     }
 
     button {
       color: white;
       font-size: 3vh;
       background-color: $blue;
+      margin: 0 auto;
       margin-top: $gutter;
-      width: 55%;
+      width: 150px;
       height: 13%;
       @include border-radius(12px);
       @include box-shadow(none);
       text-shadow:none;
+      display: block;
       border:none;
+        @media only screen and (min-width: 375px) {
+          width: 300px;
+        }
+        @media only screen and (min-width: 768px) {
+          width: 500px;
+        }
+        @media only screen and (min-width: 960px) {
+          width: 700px;
+        }
     }
   }
 }
