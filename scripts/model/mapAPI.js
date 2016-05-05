@@ -31,7 +31,7 @@
 
   mapAPI.requestDropBox = function(userAddress) {
     $.get('https://www.googleapis.com/civicinfo/v2/voterinfo?address=' + userAddress + '&fields=dropOffLocations&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
-    .done(function(data) {
+    .success(function(data) {
       mapAPI.dropbox = data;
       var pollAddress = mapAPI.dropbox.dropOffLocations[0].address.line1 + ' ' + mapAPI.dropbox.dropOffLocations[0].address.city + ' ' + mapAPI.dropbox.dropOffLocations[0].address.state + ' ' + mapAPI.dropbox.dropOffLocations[0].address.zip;
       var pollTitle = mapAPI.dropbox.dropOffLocations[0].name;
