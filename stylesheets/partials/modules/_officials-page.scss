@@ -1,5 +1,19 @@
 #officials-page{
 
+  text-align: center;
+
+  #rep-list {
+    font-size: 80%;
+
+    @media only screen and (min-width: $break-small) {
+      font-size: 60%
+    }
+}
+
+#address-text {
+  margin-bottom: $gutter;
+}
+
   a[href="#first-time-modal"] {
     display: none;
   }
