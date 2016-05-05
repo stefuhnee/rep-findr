@@ -4,6 +4,7 @@
 @import url(../vendor/styles/jquery-ui.theme.min.css);
 @import url(../vendor/styles/icons.css);
 @import url(../vendor/styles/jquery-modal.css);
+@import url(../vendor/styles/jquery.bxslider.css);
 body {
   width: 100%;
   margin: 0 auto;
@@ -117,44 +118,35 @@ footer nav {
       font-size: 4vh; }
 
 .main-input {
-  display: table;
-  height: 50vh;
-  width: 100%;
-  outline: 1px solid black;
-  position: relative; }
-  .main-input div {
-    background-image: url("http://cdn.fansided.com/wp-content/blogs.dir/276/files/2014/07/murica-eagle-2013-850x560.jpg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: table-cell;
+  position: relative;
+  bottom: 5vh; }
+  .main-input #user-input {
+    position: absolute;
     vertical-align: middle;
     width: 100%;
-    text-align: center; }
-    .main-input div input {
+    text-align: center;
+    z-index: 10;
+    top: 20vh; }
+    .main-input #user-input .slider {
+      z-index: 0; }
+    .main-input #user-input input {
       font-size: 3vh;
       color: #D6D6D6;
       text-align: center;
       width: 75%;
       height: 13%;
       box-shadow: 1px 2px 6px #53585F; }
-    .main-input div button {
+    .main-input #user-input button {
       color: white;
       font-size: 3vh;
       background-color: #3C3B6E;
       margin-top: 2vh;
       width: 55%;
       height: 13%;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      -ms-border-radius: 12px;
       border-radius: 12px;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      -ms-box-shadow: none;
-      box-shadow: none;
       text-shadow: none;
-      border: none; }
+      border: none;
+      box-shadow: none; }
 
 #map {
   width: 75%;
@@ -222,27 +214,27 @@ a.Independent-color, h1.Independent-color {
   height: 20vh;
   position: relative; }
   .party-boxes #blue, .party-boxes #red {
-    height: 100%;
-    width: 43%;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    border-radius: 25px;
-    display: table;
-    text-align: center; }
-    .party-boxes #blue h1, .party-boxes #red h1 {
-      color: white;
-      font-size: 12vh;
-      display: table-cell;
-      vertical-align: middle; }
+    max-width: 43%; }
+    @media screen and (min-width: 768px) {
+      .party-boxes #blue, .party-boxes #red {
+        max-width: 30%; } }
+    @media screen and (min-width: 960px) {
+      .party-boxes #blue, .party-boxes #red {
+        max-width: 25%; } }
   .party-boxes #blue {
     margin-left: 2vh;
     float: left;
     background-color: #3C3B6E; }
+    @media screen and (min-width: 960px) {
+      .party-boxes #blue {
+        margin-left: 10vh; } }
   .party-boxes #red {
     margin-right: 2vh;
     float: right;
     background-color: #B22234; }
+    @media screen and (min-width: 960px) {
+      .party-boxes #red {
+        margin-right: 10vh; } }
 
 .project-info {
   padding: 0 2vh;

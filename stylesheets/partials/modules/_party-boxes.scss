@@ -4,17 +4,12 @@
   position: relative;
 
   #blue, #red {
-    height: 100%;
-    width: 43%;
-    @include border-radius(25px);
-    display: table;
-    text-align: center;
-
-    h1 {
-      color: white;
-      font-size: 12vh;
-      display: table-cell;
-      vertical-align: middle;
+    max-width: 43%;
+    @media screen and (min-width: $break-medium) {
+      max-width: 30%
+    }
+    @media screen and (min-width: $break-large) {
+      max-width: 25%
     }
   }
 
@@ -22,11 +17,17 @@
     margin-left: $gutter;
     float: left;
     background-color: $blue;
+    @media screen and (min-width: $break-large) {
+      margin-left: $gutter*5;
+    }
   }
 
   #red {
     margin-right: $gutter;
     float: right;
     background-color: $red;
+    @media screen and (min-width: $break-large) {
+      margin-right: $gutter*5;
+    }
   }
 }

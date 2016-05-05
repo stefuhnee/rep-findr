@@ -45,7 +45,19 @@
   <main>
     <div id="landing-page" class="page">
       <section class="main-input">
-        <div>
+        <ul class="slider">
+          <li><img src="/img/murica1.jpg" /></li>
+          <li><img src="/img/murica2.jpg" /></li>
+          <li><img src="/img/murica3.jpg" /></li>
+          <li><img src="/img/murica4.jpg" /></li>
+          <li><img src="/img/murica5.jpg" /></li>
+          <li><img src="/img/murica6.jpg" /></li>
+          <li><img src="/img/murica8.jpg" /></li>
+          <li><img src="/img/murica9.jpg" /></li>
+          <li><img src="/img/murica10.jpg" /></li>
+          <li><img src="/img/murica11.jpg" /></li>
+        </ul>
+        <div id="user-input">
           <input type="text" name="userProvidedAddress" placeholder="Enter your address here">
           <button class="rep-findr">Find your rep!</button>
         </div>
@@ -58,8 +70,8 @@
       </section>
 
       <section class="party-boxes">
-        <div id="blue"><h1>D</h1></div>
-        <div id="red"><h1>R</h1></div>
+        <img id="blue" src="/img/donkey5.gif">
+        <img id="red" src="/img/elephant2.gif">
         <div class="clearfix"></div>
       </section>
     </div>
@@ -123,6 +135,7 @@
       </ul>
     </nav>
   </footer>
+
   <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
   <script src="vendor/scripts/jquery-ui.min.js"></script>
   <script src="vendor/scripts/jquery-modal.js"></script>
@@ -130,6 +143,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDZ4SEKlLpCmZ3SXBySjzNBnzn1-iF2po"></script>
   <script src="vendor/scripts/handlebars.js"></script>
   <script src="vendor/scripts/page.js"></script>
+  <script src="vendor/scripts/jquery.bxslider.min.js"></script>
 
   <script src="scripts/model/civicDataAPI.js"></script>
   <script src="scripts/model/mapAPI.js"></script>
@@ -145,6 +159,9 @@
   <script src="scripts/controller/aboutPageController.js"></script>
 
   <script src="scripts/controller/routes.js"></script>
+
+  <script src="scripts/slider.js"></script>
+
 </body>
 
 </html>
