@@ -161,7 +161,27 @@ footer nav {
 .modal {
   display: none;
   width: 85%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
+
+.rep-details h1 {
+  margin-bottom: 0; }
+.rep-details h2 {
+  font-size: 1.5em;
+  margin-top: .2em;
+  margin-bottom: 0; }
+.rep-details h3 {
+  font-size: 1.25em;
+  margin-top: .2em; }
+.rep-details h4 {
+  font-size: 1.25em; }
+.rep-details p {
+  padding: 0 0;
+  margin: .2em; }
+  .rep-details p:first-of-type {
+    margin: .7em; }
+.rep-details a {
+  text-decoration: underline; }
 
 a.Republican-color, h1.Republican-color {
   color: #B22234; }
@@ -173,7 +193,6 @@ a.Independent-color, h1.Independent-color {
   color: #53585F; }
 
 #first-time-modal {
-  display: inline-block;
   vertical-align: middle;
   position: relative;
   z-index: 2;
@@ -190,7 +209,7 @@ a.Independent-color, h1.Independent-color {
   box-shadow: none;
   text-align: center;
   margin-top: 50vh; }
-  #first-time-modal p {
+  #first-time-modal h1 {
     color: white; }
   #first-time-modal a.close-modal {
     display: none; }
