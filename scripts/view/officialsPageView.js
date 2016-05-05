@@ -6,6 +6,11 @@
     return template(official);
   };
 
+  officialsPageView.showOfficialsPage = function() {
+    $('.page').hide();
+    $('#officials-page').show();
+  };
+
   // var renderModal = function(official){
   //   var templateModal = Handlebars.compile($('#rep-template-modal').text());
   //   return template(official);
