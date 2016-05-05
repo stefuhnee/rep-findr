@@ -190,8 +190,15 @@ footer nav {
 
 .rep-details {
   top: 20vh; }
+  .rep-details img {
+    max-width: 30%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
   .rep-details h1 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-top: .2em; }
   .rep-details h2 {
     font-size: 1.5em;
     margin-top: .2em;
