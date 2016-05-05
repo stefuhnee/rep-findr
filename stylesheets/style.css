@@ -246,6 +246,20 @@ a.Independent-color, h1.Independent-color {
   #first-time-modal a.close-modal {
     display: none; }
 
+#officials-page {
+  text-align: center; }
+  #officials-page #rep-list {
+    font-size: 80%; }
+    @media only screen and (min-width: 375px) {
+      #officials-page #rep-list {
+        font-size: 60%; } }
+  #officials-page #address-text {
+    margin-bottom: 2vh; }
+  #officials-page a[href="#first-time-modal"] {
+    display: none; }
+  #officials-page p {
+    margin: 0 auto; }
+
 .party-boxes {
   width: 100%;
   height: 20vh;
