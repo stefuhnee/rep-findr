@@ -4,14 +4,36 @@
   margin: 0 auto;
 }
 
-a.Republican-color {
+a.Republican-color, h1.Republican-color {
   color: $red;
 }
 
-a.Democratic-color {
+a.Democratic-color, h1.Democratic-color {
   color: $blue;
 }
 
-a.Independent-color {
+a.Independent-color, h1.Independent-color {
   color: $dark-grey;
+}
+
+#first-time-modal {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  background-color: rgba(0, 0, 0, 0.0);
+  padding: 15px 30px;
+  @include border-radius(0);
+  @include box-shadow(none);
+  text-align: center;
+  margin-top: 50vh;
+
+  p {
+    color:white;
+  }
+
+  a.close-modal {
+    display:none;
+  }
 }
