@@ -13,6 +13,7 @@
     this.photoURL = photoURL;
     this.social = social;
     this.handlebarsID = this.name.replace(/[^a-z]+/ig, '');
+    this.phoneHREF = this.phone.replace(/\D+/g, '');
   }
 
   civicDataAPI.requestData = function(userAddress, level, official) {
