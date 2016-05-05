@@ -16,7 +16,7 @@
 
   civicDataAPI.requestData = function(userAddress, level, official) {
     $.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + userAddress + '&includeOffices=true&levels=' + level + '&roles=' + official + '&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
-    .done(function(data) {
+    .success(function(data) {
       civicDataAPI.handleData(data);
     });
   };
