@@ -14,24 +14,21 @@
       <a href="#{{handlebarsID}}" rel="modal:open" class="{{party}}-color"><h1>{{name}}</h1></a>
       <h2>{{office}}</h2>
 
-      <div class="modal" id="{{handlebarsID}}">
+      <div class="modal rep-details" id="{{handlebarsID}}">
         <img src="{{img-src}}">
         <h1 class="{{party}}-color">{{name}}</h1>
         <h2>{{office}}</h2>
-        <h2>{{party}}</h2>
-        <ul>
-          <li>{{phone}}</li>
-          <li>{{address.0.line1}} {{address.0.city}}, {{address.0.state}} {{address.0.zip}}</li>
-        </ul>
-        <h2>Social Media</h1>
-        <ul>
+        <h3>{{party}}</h3>
+        <p>{{phone}}</p>
+        <p>{{address.0.line1}}</p>
+        <p>{{address.0.city}}, {{address.0.state}} {{address.0.zip}}</p>
+        <h4>Social Media</h4>
           {{#if social.Facebook}}
-          <li>Facebook: <a href="http://www.facebook.com/ {{social.Facebook}}">{{social.Facebook}}</a></li>
+          <p>Facebook: <a href="http://www.facebook.com/ {{social.Facebook}}">{{social.Facebook}}</a></p>
           {{/if}}
           {{#if social.Twitter}}
-          <li>Twitter: <a href="http://www.twitter.com/{{social.Twitter}}">{{social.Twitter}}</a></li>
+          <p>Twitter: <a href="http://www.twitter.com/{{social.Twitter}}">{{social.Twitter}}</a></p>
           {{/if}}
-        </ul>
       </div>
 
     </article>
@@ -67,12 +64,13 @@
       </section>
     </div>
 
-    <div id="first-time-modal">
-      <p>Click on a Rep's name to learn more!</p>
-    </div>
-
     <!-- page with API data -->
+
     <div id="officials-page" class="page">
+      <div id="first-time-modal" class="modal">
+        <h1>Click or tap on a name for contact info!</h1>
+      </div>
+      
       <a href="#first-time-modal" rel="modal:open"></a>
       <section id="rep-list">
       </section>

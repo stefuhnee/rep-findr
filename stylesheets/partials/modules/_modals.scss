@@ -2,6 +2,37 @@
   display: none;
   width: 85%;
   margin: 0 auto;
+  text-align: center;
+}
+
+.rep-details {
+  h1 {
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-top: .2em;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 1.25em;
+    margin-top: .2em;
+  }
+  h4 {
+    font-size: 1.25em;
+  }
+  p {
+    padding: 0 0;
+    margin: .2em;
+
+    &:first-of-type {
+      margin: .7em;
+    }
+  }
+  a {
+    text-decoration: underline;
+  }
+
 }
 
 a.Republican-color, h1.Republican-color {
@@ -17,7 +48,6 @@ a.Independent-color, h1.Independent-color {
 }
 
 #first-time-modal {
-  display: inline-block;
   vertical-align: middle;
   position: relative;
   z-index: 2;
@@ -29,7 +59,7 @@ a.Independent-color, h1.Independent-color {
   text-align: center;
   margin-top: 50vh;
 
-  p {
+  h1 {
     color:white;
   }
 
