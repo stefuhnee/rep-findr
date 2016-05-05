@@ -20,7 +20,7 @@
         var marker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location,
-          title: 'Your dropbox location is ' + pollTitle + ' ' + pollAddress,
+          title: 'Your ballot dropbox location is ' + pollTitle + ' ' + pollAddress,
           animation: google.maps.Animation.DROP
         });
       } else {
@@ -37,14 +37,17 @@
         var pollAddress = mapAPI.dropbox.dropOffLocations[0].address.line1 + ' ' + mapAPI.dropbox.dropOffLocations[0].address.city + ' ' + mapAPI.dropbox.dropOffLocations[0].address.state + ' ' + mapAPI.dropbox.dropOffLocations[0].address.zip;
         var pollTitle = mapAPI.dropbox.dropOffLocations[0].name;
         console.log('The map displays the users ballot drop box location: ' + pollAddress);
+        $('#address-text').text('Your ballot dropbox location is ' + pollTitle + ' ' + pollAddress);
         mapAPI.requestMap(pollAddress, pollTitle);
       } else {
         mapAPI.requestMap(userAddress, 'not listed in the Google Civic API so here is a map of your address instead:');
+        $('#address-text').text('Your ballot dropbox location is not listed in the Google Civic API so here is a map of your address instead:');
         console.log('Map is now users address instead of dropbox.');
       }
     })
     .fail(function() {
       mapAPI.requestMap(userAddress, 'not listed in the Google Civic API so here is a map of your address instead:');
+      $('#address-text').text('Your ballot dropbox location is not listed in the Google Civic API so here is a map of your address instead:');
       console.log('Map is now users address instead of dropbox.');
     });
   };
