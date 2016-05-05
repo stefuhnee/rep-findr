@@ -36,7 +36,8 @@ header {
   height: 60px;
   width: 100%;
   text-align: center;
-  display: table; }
+  display: table;
+  top: 0; }
   header h1 {
     display: table-cell;
     vertical-align: middle;
