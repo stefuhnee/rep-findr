@@ -1,5 +1,6 @@
 (function(module) {
   var civicDataAPI = {};
+  var dataReturned = [];
 
   civicDataAPI.officialArray = [];
 
@@ -24,6 +25,7 @@
         console.log('dataReturned array', dataReturned);
         if (dataReturned.length === 3) {
           civicDataAPI.handleData(dataReturned);
+          dataReturned = [];
         }
       });
     };
