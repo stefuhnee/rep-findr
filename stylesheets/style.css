@@ -3,22 +3,21 @@
 @import url(../vendor/styles/jquery-ui.structure.min.css);
 @import url(../vendor/styles/jquery-ui.theme.min.css);
 @import url(../vendor/styles/icons.css);
+@import url(../vendor/styles/jquery-modal.css);
 body {
   width: 100%;
   margin: 0 auto;
   position: relative;
   font-family: Helvetica;
-  z-index: -1; }
-
-#map {
-  height: 500px;
-  max-width: 500px; }
+  z-index: -1;
+  color: #53585F; }
 
 p {
   font-size: 3vh; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #53585F; }
 
 .clearfix {
   clear: both; }
@@ -155,6 +154,47 @@ footer nav {
       text-shadow: none;
       border: none; }
 
+#map {
+  height: 500px;
+  max-width: 500px; }
+
+.modal {
+  display: none;
+  width: 85%;
+  margin: 0 auto; }
+
+a.Republican-color, h1.Republican-color {
+  color: #B22234; }
+
+a.Democratic-color, h1.Democratic-color {
+  color: #3C3B6E; }
+
+a.Independent-color, h1.Independent-color {
+  color: #53585F; }
+
+#first-time-modal {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  background-color: transparent;
+  padding: 15px 30px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+  text-align: center;
+  margin-top: 50vh; }
+  #first-time-modal p {
+    color: white; }
+  #first-time-modal a.close-modal {
+    display: none; }
+
 .party-boxes {
   width: 100%;
   height: 20vh;
@@ -190,7 +230,8 @@ footer nav {
   .project-info h1 {
     font-size: 20px;
     display: inline-block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    color: black; }
   .project-info p {
     text-align: justify;
     line-height: 24px; }

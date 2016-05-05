@@ -5,20 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rep Findr</title>
   <link rel="stylesheet" href="stylesheets/style.css">
+
+
+
   <script id="rep-template" type="text/x-handlebars-template">
     <article>
       <img src="{{img-src}}">
-      <h1>{{name}}</h1>
+      <a href="#{{handlebarsID}}" rel="modal:open" class="{{party}}-color"><h1>{{name}}</h1></a>
       <h2>{{office}}</h2>
-      <h2>{{party}}</h2>
-      <ul>
-        <li>{{phone}}</li>
-        <li>{{address.0.line1}} {{address.0.city}}, {{address.0.state}} {{address.0.zip}}</li>
-      </ul>
+
+      <div class="modal" id="{{handlebarsID}}">
+        <img src="{{img-src}}">
+        <h1 class="{{party}}-color">{{name}}</h1>
+        <h2>{{office}}</h2>
+        <h2>{{party}}</h2>
+        <ul>
+          <li>{{phone}}</li>
+          <li>{{address.0.line1}} {{address.0.city}}, {{address.0.state}} {{address.0.zip}}</li>
+        </ul>
+        <h2>Social Media</h1>
+        <ul>
+          {{#if social.Facebook}}
+          <li>Facebook: <a href="http://www.facebook.com/ {{social.Facebook}}">{{social.Facebook}}</a></li>
+          {{/if}}
+          {{#if social.Twitter}}
+          <li>Twitter: <a href="http://www.twitter.com/{{social.Twitter}}">{{social.Twitter}}</a></li>
+          {{/if}}
+        </ul>
+      </div>
+
     </article>
   </script>
-
-
 
 </head>
 <body>
@@ -29,30 +46,42 @@
 
 
   <main>
-    <section class="main-input">
-      <div>
-        <input type="text" name="userProvidedAddress" placeholder="Enter your address here">
-        <button class="rep-findr">Find your rep!</button>
-      </div>
-    </section>
+    <div id="landing-page">
+      <section class="main-input">
+        <div>
+          <input type="text" name="userProvidedAddress" placeholder="Enter your address here" value="606 156th St NE Arlington WA 98223">
+          <button class="rep-findr">Find your rep!</button>
+        </div>
+      </section>
 
-    <section class="project-info">
-      <h1>Why Should You Use RepFindr?</h1>
-      <p>If you are like us, you've probably spent much of your adult life oblivious to the comings and goings of your elected representatives. Who is your Congressman? Who are your Senators? Your Mayor? Governor?</p>
-      <p>RepFindr will help you track down your elected officials, find their contact info, and see if their voting records match up with your interests.</p>
-    </section>
+      <section class="project-info">
+        <h1>Why Should You Use RepFindr?</h1>
+        <p>If you are like us, you've probably spent much of your adult life oblivious to the comings and goings of your elected representatives. Who is your Congressman? Who are your Senators? Your Mayor? Governor?</p>
+        <p>RepFindr will help you track down your elected officials, find their contact info, and see if their voting records match up with your interests.</p>
+      </section>
 
-    <section class="party-boxes">
-      <div id="blue"><h1>D</h1></div>
-      <div id="red"><h1>R</h1></div>
-      <div class="clearfix"></div>
-    </section>
-    <section id="rep-list">
-    </section>
-    <section id="map"><p>Map will go here</p></section>
-    <!-- Placeholder to test map -->
+      <section class="party-boxes">
+        <div id="blue"><h1>D</h1></div>
+        <div id="red"><h1>R</h1></div>
+        <div class="clearfix"></div>
+      </section>
+    </div>
 
-    <section id="about">
+    <div id="first-time-modal">
+      <p>Click on a Rep's name to learn more!</p>
+    </div>
+
+    <!-- page with API data -->
+    <div id="officials-page">
+      <a href="#first-time-modal" rel="modal:open"></a>
+      <section id="rep-list">
+      </section>
+
+      <section id="map"></section>
+      <!-- Placeholder to test map -->
+    </div>
+    <!-- About page -->
+    <div id="about">
       <div class="outside">
         <div class="inside">
           <div class="img-placeholder"></div>
@@ -77,12 +106,13 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="clearfix">
     <nav>
       <ul>
+        <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li class="clearfix">
           <a href="#" class="icon-facebook2"></a>
@@ -95,14 +125,26 @@
   </footer>
   <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
   <script src="vendor/scripts/jquery-ui.min.js"></script>
+  <script src="vendor/scripts/jquery-modal.js"></script>
   <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDZ4SEKlLpCmZ3SXBySjzNBnzn1-iF2po"></script>
   <script src="vendor/scripts/handlebars.js"></script>
   <script src="vendor/scripts/page.js"></script>
-  <script src="scripts/app.js"></script>
-  <script src="scripts/repView.js"></script>
-  <script src="scripts/model.js"></script>
-  <script src="scripts/routes.js"></script>
+
+  <script src="scripts/model/civicDataAPI.js"></script>
+  <script src="scripts/model/mapAPI.js"></script>
+  <script src="scripts/model/dataBase.js"></script>
+
+
+  <script src="scripts/view/landingPageView.js"></script>
+  <script src="scripts/view/officialsPageView.js"></script>
+  <script src="scripts/view/aboutPageView.js"></script>
+
+  <script src="scripts/controller/landingPageController.js"></script>
+  <script src="scripts/controller/officialsPageController.js"></script>
+  <script src="scripts/controller/aboutPageController.js"></script>
+
+  <script src="scripts/controller/routes.js"></script>
 </body>
 
 </html>
