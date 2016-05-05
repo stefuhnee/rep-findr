@@ -5,6 +5,7 @@
   var $addressInputEl = $('input[name=userProvidedAddress]');
 
   landingPageView.showLandingPage = function() {
+    $('.main-input input').val('');
     $('.page').hide();
     $('#landing-page').show();
   };
