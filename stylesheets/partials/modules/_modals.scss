@@ -1,11 +1,14 @@
 .modal {
   display: none;
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
+  position: absolute;
 }
 
 .rep-details {
+  top: 20vh;
+
   h1 {
     margin-bottom: 0;
   }
@@ -48,16 +51,15 @@ a.Independent-color, h1.Independent-color {
 }
 
 #first-time-modal {
-  vertical-align: middle;
-  position: relative;
+  position: absolute;
+  top: 60vh;
   z-index: 2;
-  width: 85%;
+  width: 75%;
   background-color: rgba(0, 0, 0, 0.0);
   padding: 15px 30px;
   @include border-radius(0);
   @include box-shadow(none);
   text-align: center;
-  margin-top: 50vh;
 
   h1 {
     color:white;
