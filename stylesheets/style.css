@@ -77,7 +77,8 @@ main {
       #about .outside .inside p {
         margin-top: 0;
         margin-bottom: 2vh;
-        line-height: 24px; }
+        line-height: 24px;
+        text-align: left; }
       #about .outside .inside .img-placeholder {
         margin: 0 auto;
         margin-top: 2vh;

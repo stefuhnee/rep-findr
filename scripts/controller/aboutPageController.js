@@ -1,6 +1,6 @@
 (function (module){
   var aboutPageController = {};
-    aboutPageController.initAboutPage = function() {
+  aboutPageController.initAboutPage = function() {
     aboutPageView.showPage();
   };
 
