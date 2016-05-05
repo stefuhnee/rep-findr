@@ -118,17 +118,19 @@ footer nav {
       font-size: 4vh; }
 
 .main-input {
-  position: relative;
-  bottom: 5vh; }
+  display: table;
+  height: 50vh;
+  width: 100%;
+  position: relative; }
   .main-input #user-input {
-    position: absolute;
+    background-image: url("/img/murica5.jpg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: table-cell;
     vertical-align: middle;
     width: 100%;
-    text-align: center;
-    z-index: 10;
-    top: 20vh; }
-    .main-input #user-input .slider {
-      z-index: 0; }
+    text-align: center; }
     .main-input #user-input input {
       font-size: 3vh;
       color: #D6D6D6;
@@ -214,6 +216,7 @@ a.Independent-color, h1.Independent-color {
   height: 20vh;
   position: relative; }
   .party-boxes #blue, .party-boxes #red {
+    bottom: 0;
     max-width: 43%; }
     @media screen and (min-width: 768px) {
       .party-boxes #blue, .party-boxes #red {

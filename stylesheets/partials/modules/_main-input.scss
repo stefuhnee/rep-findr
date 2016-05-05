@@ -1,18 +1,18 @@
 .main-input {
+  display: table;
+  height: 50vh;
+  width: 100%;
   position: relative;
-  bottom: 5vh;
 
    #user-input {
-    position: absolute;
+    background-image: url('/img/murica5.jpg');
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: table-cell;
     vertical-align: middle;
     width: 100%;
     text-align: center;
-    z-index: 10;
-    top: 20vh;
-
-    .slider {
-      z-index: 0;
-    }
 
     input {
       font-size: 3vh;

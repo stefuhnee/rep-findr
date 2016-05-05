@@ -4,6 +4,7 @@
   position: relative;
 
   #blue, #red {
+    bottom: 0;
     max-width: 43%;
     @media screen and (min-width: $break-medium) {
       max-width: 30%
