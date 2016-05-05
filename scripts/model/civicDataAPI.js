@@ -14,6 +14,7 @@
     this.handlebarsID = this.name.split(/\s/g).join('-');
   }
 
+// queryObj contains specific key value pairs passed in to construct our query, which will be called 3 times. The data returned is pushed into an array on each request to later handle.
   civicDataAPI.requestData = function(userAddress, queryObj) {
     dataReturned = [];
     for (var key in queryObj) {
@@ -28,6 +29,8 @@
     };
   };
 
+
+// Constructs objects based on query response for each official.
   civicDataAPI.handleData = function(data) {
     data.forEach(function(dataObj) {
       var officials = dataObj.officials;
