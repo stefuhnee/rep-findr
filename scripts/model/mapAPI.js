@@ -8,7 +8,8 @@
     var latlng = new google.maps.LatLng(122.332, -47.606);
     var mapOptions = {
       zoom: 15,
-      center: latlng
+      center: latlng,
+      scrollwheel: false,
     };
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
   };
