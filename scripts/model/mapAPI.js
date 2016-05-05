@@ -20,7 +20,7 @@
         var marker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location,
-          title: 'Your dropbox location is: ' + pollTitle + ' ' + pollAddress,
+          title: 'Your dropbox location is ' + pollTitle + ' ' + pollAddress,
           animation: google.maps.Animation.DROP
         });
       } else {
@@ -37,12 +37,10 @@
       var pollTitle = mapAPI.dropbox.dropOffLocations[0].name;
       console.log(pollAddress);
       mapAPI.requestMap(pollAddress, pollTitle);
-      $('#map').show();
     })
     .fail(function() {
-      mapAPI.initialize();
-      $('#map').hide();
-      console.log('No map for you!');
+      mapAPI.requestMap(userAddress, 'not listed in the Google Civic API so here is a map of your address instead:');
+      console.log('Map is now users address instead of dropbox.');
     });
   };
 
