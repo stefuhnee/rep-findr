@@ -155,8 +155,10 @@ footer nav {
       border: none; }
 
 #map {
-  height: 500px;
-  max-width: 500px; }
+  width: 75%;
+  height: 65vh;
+  margin: auto;
+ }
 
 .modal {
   display: none;
