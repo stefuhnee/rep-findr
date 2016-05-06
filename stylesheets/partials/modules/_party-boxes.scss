@@ -1,14 +1,17 @@
 .party-boxes {
-  width: 100%;
-  height: 20vh;
   position: relative;
+
+  div {
+    margin: 0 auto;
+    height: 20vh;
+    text-align: center;
+  }
 
   #blue, #red {
     height: 100%;
-    width: 43%;
+    max-width: 43%;
     @include border-radius(25px);
-    display: table;
-    text-align: center;
+    display: inline;
 
     h1 {
       color: white;
@@ -19,14 +22,16 @@
   }
 
   #blue {
-    margin-left: $gutter;
-    float: left;
-    background-color: $blue;
+    margin-right: $gutter;
+    @media only screen and (min-width: $break-medium) {
+      margin-right: $gutter*5;
+    }
   }
 
   #red {
-    margin-right: $gutter;
-    float: right;
-    background-color: $red;
+    margin-left: $gutter;
+    @media only screen and (min-width: $break-medium) {
+      margin-left: $gutter*5;
+    }
   }
 }

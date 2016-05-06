@@ -58,9 +58,10 @@
       </section>
 
       <section class="party-boxes">
-        <div id="blue"><h1>D</h1></div>
-        <div id="red"><h1>R</h1></div>
-        <div class="clearfix"></div>
+        <div>
+          <img id="blue" src="img/donkey.gif">
+          <img id="red" src="img/elephant.gif">
+        </div>
       </section>
     </div>
 
@@ -74,7 +75,9 @@
       </section>
 
       <!--Displays map of users polling drop box or home address -->
-      <p id="address-text"></p>
+      <div id="address-text-container">
+        <p id="address-text"></p>
+      </div>
       <section id="map"></section>
 
 
@@ -85,7 +88,7 @@
         <div class="inside">
           <img class="img-placeholder" src="img/StefanieRepFindr.png"/>
           <h1>Stefanie</h1>
-          <p>Born in Seattle, Stefanie enjoys developing unique and functional applications, rock climbing, hiking, gardening, and exploring unfamiliar places.</p>
+          <p>Stefanie enjoys developing unique and functional applications, rock climbing, hiking, gardening, and exploring unfamiliar places.</p>
         </div>
         <div class="inside">
           <img class="img-placeholder" src="img/ChrisRepFindr.jpg"/>
@@ -129,6 +132,8 @@
   <script src="vendor/scripts/handlebars.js"></script>
   <script src="vendor/scripts/page.js"></script>
 
+
+  <script src="scripts/env.js"></script>
   <script src="scripts/model/civicDataAPI.js"></script>
   <script src="scripts/model/mapAPI.js"></script>
   <script src="scripts/model/dataBase.js"></script>

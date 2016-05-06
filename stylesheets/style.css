@@ -31,6 +31,7 @@ footer {
 
 header {
   background-color: #D6D6D6;
+  border-bottom: 1px solid #53585F;
   position: fixed;
   z-index: 50;
   height: 60px;
@@ -120,12 +121,11 @@ footer nav {
   display: table;
   height: 50vh;
   width: 100%;
-  outline: 1px solid black;
   position: relative; }
   .main-input div {
-    background-image: url("http://cdn.fansided.com/wp-content/blogs.dir/276/files/2014/07/murica-eagle-2013-850x560.jpg");
+    background-image: url("/img/murica2.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: auto;
     background-repeat: no-repeat;
     display: table-cell;
     vertical-align: middle;
@@ -133,10 +133,10 @@ footer nav {
     text-align: center; }
     .main-input div input {
       font-size: 3vh;
-      color: #D6D6D6;
+      color: #3C3B6E;
       text-align: center;
       width: 150px;
-      height: 13%;
+      height: 5vh;
       box-shadow: 1px 2px 6px #53585F; }
       @media only screen and (min-width: 375px) {
         .main-input div input {
@@ -154,11 +154,11 @@ footer nav {
       margin: 0 auto;
       margin-top: 2vh;
       width: 150px;
-      height: 13%;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      -ms-border-radius: 12px;
-      border-radius: 12px;
+      height: 5vh;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       -ms-box-shadow: none;
@@ -168,13 +168,13 @@ footer nav {
       border: none; }
       @media only screen and (min-width: 375px) {
         .main-input div button {
-          width: 300px; } }
+          width: 150px; } }
       @media only screen and (min-width: 768px) {
         .main-input div button {
-          width: 500px; } }
+          width: 200px; } }
       @media only screen and (min-width: 960px) {
         .main-input div button {
-          width: 700px; } }
+          width: 200px; } }
 
 #map {
   width: 75%;
@@ -253,39 +253,50 @@ a.Independent-color, h1.Independent-color {
     @media only screen and (min-width: 375px) {
       #officials-page #rep-list {
         font-size: 60%; } }
-  #officials-page #address-text {
-    margin-bottom: 2vh; }
+  #officials-page #address-text-container {
+    width: 75%;
+    background-color: #3C3B6E;
+    color: white;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin: 0 auto; }
+  #officials-page #address-text p {
+    padding-right: 1vh;
+    padding-left: 1vh; }
   #officials-page a[href="#first-time-modal"] {
     display: none; }
   #officials-page p {
     margin: 0 auto; }
 
 .party-boxes {
-  width: 100%;
-  height: 20vh;
   position: relative; }
+  .party-boxes div {
+    margin: 0 auto;
+    height: 20vh;
+    text-align: center; }
   .party-boxes #blue, .party-boxes #red {
     height: 100%;
-    width: 43%;
+    max-width: 43%;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     border-radius: 25px;
-    display: table;
-    text-align: center; }
+    display: inline; }
     .party-boxes #blue h1, .party-boxes #red h1 {
       color: white;
       font-size: 12vh;
       display: table-cell;
       vertical-align: middle; }
   .party-boxes #blue {
-    margin-left: 2vh;
-    float: left;
-    background-color: #3C3B6E; }
+    margin-right: 2vh; }
+    @media only screen and (min-width: 768px) {
+      .party-boxes #blue {
+        margin-right: 10vh; } }
   .party-boxes #red {
-    margin-right: 2vh;
-    float: right;
-    background-color: #B22234; }
+    margin-left: 2vh; }
+    @media only screen and (min-width: 768px) {
+      .party-boxes #red {
+        margin-left: 10vh; } }
 
 .project-info {
   padding: 0 2vh;
