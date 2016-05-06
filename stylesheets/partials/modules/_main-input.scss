@@ -2,13 +2,12 @@
   display: table;
   height: 50vh;
   width: 100%;
-  outline: 1px solid black;
   position: relative;
 
   div {
-    background-image: url('http://cdn.fansided.com/wp-content/blogs.dir/276/files/2014/07/murica-eagle-2013-850x560.jpg');
+    background-image: url('/img/murica2.jpg');
     background-position: center;
-    background-size: contain;
+    background-size: auto;
     background-repeat: no-repeat;
     display: table-cell;
     vertical-align: middle;
@@ -17,10 +16,10 @@
 
     input {
       font-size: 3vh;
-      color: $light-grey;
+      color: $blue;
       text-align: center;
       width: 150px;
-      height: 13%;
+      height: 5vh;
       box-shadow: 1px 2px 6px $dark-grey;
         @media only screen and (min-width: $break-small) {
           width: 300px;
@@ -40,20 +39,20 @@
       margin: 0 auto;
       margin-top: $gutter;
       width: 150px;
-      height: 13%;
-      @include border-radius(12px);
+      height: 5vh;
+      @include border-radius(5px);
       @include box-shadow(none);
       text-shadow:none;
       display: block;
       border:none;
         @media only screen and (min-width: $break-small) {
-          width: 300px;
+          width: 150px;
         }
         @media only screen and (min-width: $break-medium) {
-          width: 500px;
+          width: 200px;
         }
         @media only screen and (min-width: $break-large) {
-          width: 700px;
+          width: 200px;
         }
     }
   }
