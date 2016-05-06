@@ -1,6 +1,11 @@
 (function (module){
   var officialsPageController = {};
 
+  officialsPageController.initRepsPage = function(ctx, next) {
+    officialsPageView.showOfficialsPage();
+    next();
+  };
+
   officialsPageController.loadReps = function(ctx, next){
     civicDataAPI.officialArray = [];
     civicDataAPI.requestData(ctx.params.address, 'administrativeArea1', 'headOfGovernment');
@@ -13,16 +18,7 @@
   officialsPageController.loadMap = function(ctx){
     mapAPI.initialize();
     mapAPI.requestDropBox(ctx.params.address);
-  }
-
-  // officialsPageController.initRepsPage = function(){
-  //   officialsPageView.displayReps(civicDataAPI.handleData);
-  // };
-
-
-
-
-
+  };
 
   module.officialsPageController = officialsPageController;
 }) (window);

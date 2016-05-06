@@ -1,11 +1,13 @@
 header {
   background-color: $light-grey;
+  border-bottom: 1px solid $dark-grey;
   position: fixed;
   z-index: 50;
   height: 60px;
   width: 100%;
   text-align: center;
   display: table;
+  top: 0;
 
   h1 {
     display: table-cell;

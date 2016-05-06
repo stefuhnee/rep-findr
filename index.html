@@ -1,150 +1,132 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rep Findr</title>
-  <link rel="stylesheet" href="stylesheets/style.css">
-
-
-
-  <script id="rep-template" type="text/x-handlebars-template">
-    <article>
-      <img src="{{img-src}}">
-      <a href="#{{handlebarsID}}" rel="modal:open" class="{{party}}-color"><h1>{{name}}</h1></a>
-      <h2>{{office}}</h2>
-
-      <div class="modal" id="{{handlebarsID}}">
-        <img src="{{img-src}}">
-        <h1 class="{{party}}-color">{{name}}</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RepFindr</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script id="rep-template" type="text/x-handlebars-template">
+      <article>
+        <a href="#{{handlebarsID}}" rel="modal:open" class="{{party}}-color"><h1>{{name}}</h1></a>
         <h2>{{office}}</h2>
-        <h2>{{party}}</h2>
-        <ul>
-          <li>{{phone}}</li>
-          <li>{{address.0.line1}} {{address.0.city}}, {{address.0.state}} {{address.0.zip}}</li>
-        </ul>
-        <h2>Social Media</h1>
-        <ul>
+        <div class="modal rep-details" id="{{handlebarsID}}">
+          <img src="{{photoURL}}" alt="{{name}}">
+          <h1 class="{{party}}-color">{{name}}</h1>
+          <h2>{{office}}</h2>
+          <h3>{{party}}</h3>
+          <a href="tel:{{phoneHREF}}" title="phone number for {{name}}"><p>{{phone}}</p></a>
+          <p class="mailing-address">{{address.0.line1}}</p>
+          <p class="mailing-address">{{address.0.city}}, {{address.0.state}} {{address.0.zip}}</p>
+          <h4>Social Media</h4>
           {{#if social.Facebook}}
-          <li>Facebook: <a href="http://www.facebook.com/ {{social.Facebook}}">{{social.Facebook}}</a></li>
+          <p>Facebook: <a href="http://www.facebook.com/{{social.Facebook}}" title="{{name}}'s Facebook account'">{{social.Facebook}}</a></p>
           {{/if}}
           {{#if social.Twitter}}
-          <li>Twitter: <a href="http://www.twitter.com/{{social.Twitter}}">{{social.Twitter}}</a></li>
+          <p>Twitter: <a href="http://www.twitter.com/{{social.Twitter}}" title="{{name}}'s Facebook account'">{{social.Twitter}}</a></p>
           {{/if}}
+        </div>
+      </article>
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="/" title="RepFindr Home"><h1>RepFin<span id='d'>d</span><span id='r'>r</span></h1></a>
+    </header>
+    <main>
+      <div id="landing-page" class="page">
+        <section class="main-input">
+          <div alt="background image of waving American flag">
+            <input type="text" name="userProvidedAddress" placeholder="Enter your address here">
+            <button class="rep-findr">Find your rep!</button>
+          </div>
+        </section>
+        <section class="project-info">
+          <h1>RepFindr is Here to Help!</h1>
+          <p>Have a concern? Want a change? Need help? Who are you going to call? The governor? Your senators? Your congressional representative? RepFindr can help you.</p>
+          <p>Enter your address and RepFindr will return the names of your elected officials with their office, party affiliation, and contact information. You will also receive a mapped location of where to drop off your ballot for the next election.</p>
+        </section>
+        <section class="party-boxes">
+          <div>
+            <img id="blue" src="img/donkey.gif" alt="Democratic donkey icon">
+            <img id="red" src="img/elephant.gif" alt="Republican donkey icon">
+          </div>
+        </section>
+      </div>
+      <div id="officials-page" class="page">
+        <div id="first-time-modal" class="modal">
+          <h1>Click or tap on a name for contact info!</h1>
+        </div>
+        <a href="#first-time-modal" rel="modal:open"></a>
+        <section id="rep-list">
+        </section>
+        <!--Displays map of users polling drop box or home address -->
+        <div id="address-text-container">
+          <p id="address-text"></p>
+        </div>
+        <section id="map"></section>
+      </div>
+      <!-- About page -->
+      <div id="about-page" class="page">
+        <div class="outside">
+          <div class="inside">
+            <img class="img-placeholder" src="img/StefanieRepFindr.png"/>
+            <h1>Stefanie</h1>
+            <p>Stefanie enjoys developing unique and functional applications, rock climbing, hiking, gardening, and exploring unfamiliar places.</p>
+          </div>
+          <div class="inside">
+            <img class="img-placeholder" src="img/ChrisRepFindr.jpg"/>
+            <h1>Chris</h1>
+            <p>Chris is a developer, marketer, and linguist. He is also a motorcyclist, a fan of Delta blues, and a new Seattleite by way of Tucson, AZ.</p>
+          </div>
+        </div>
+        <div class="outside">
+          <div class="inside">
+            <img class="img-placeholder" src="img/MattRepFindr.jpg"/>
+            <h1>Matt</h1>
+            <p>Matthew grew up in Mill Creek, WA, then moved to LA where he lived for 15 years before moving to Seattle to be near family and work in tech.</p>
+          </div>
+          <div class="inside">
+            <img class="img-placeholder" src="img/JeffRepFindr.jpg"/>
+            <h1>Jeff</h1>
+            <p>Jeff, a native northwesterner, lives in Everett and enjoys boating, Scandinavian crime fiction, kids, karaoke, and coding.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="clearfix">
+      <nav>
+        <ul>
+          <li><a href="/" title="RepFindr Home">Home</a></li>
+          <li class="clearfix">
+            <a href="http://www.facebook.com" class="icon-facebook2" title="Facebook"></a>
+            <a href="mailto:nobody@email.com" class="icon-mail4" title="email"></a>
+            <a href="http://www.twitter.com" class="icon-twitter" title="Twitter"></a>
+          </li>
+          <li><a href="/about" title="RepFindr Team About Page">About</a></li>
         </ul>
-      </div>
+      </nav>
+    </footer>
+    <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
+    <script src="vendor/scripts/jquery-modal.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDZ4SEKlLpCmZ3SXBySjzNBnzn1-iF2po"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="vendor/scripts/page.js"></script>
+    <script src="vendor/scripts/konami.js"></script>
 
-    </article>
-  </script>
+    <script src="scripts/env.js"></script>
+    <script src="scripts/model/civicDataAPI.js"></script>
+    <script src="scripts/model/mapAPI.js"></script>
+    <script src="scripts/model/dataBase.js"></script>
 
-</head>
-<body>
-  <header>
-    <h1>RepFin<span id='d'>d</span><span id='r'>r</span></h1>
-  </header>
+    <script src="scripts/view/landingPageView.js"></script>
+    <script src="scripts/view/officialsPageView.js"></script>
+    <script src="scripts/view/aboutPageView.js"></script>
 
+    <script src="scripts/controller/landingPageController.js"></script>
+    <script src="scripts/controller/officialsPageController.js"></script>
+    <script src="scripts/controller/aboutPageController.js"></script>
 
-
-  <main>
-    <div id="landing-page">
-      <section class="main-input">
-        <div>
-          <input type="text" name="userProvidedAddress" placeholder="Enter your address here" value="606 156th St NE Arlington WA 98223">
-          <button class="rep-findr">Find your rep!</button>
-        </div>
-      </section>
-
-      <section class="project-info">
-        <h1>Why Should You Use RepFindr?</h1>
-        <p>If you are like us, you've probably spent much of your adult life oblivious to the comings and goings of your elected representatives. Who is your Congressman? Who are your Senators? Your Mayor? Governor?</p>
-        <p>RepFindr will help you track down your elected officials, find their contact info, and see if their voting records match up with your interests.</p>
-      </section>
-
-      <section class="party-boxes">
-        <div id="blue"><h1>D</h1></div>
-        <div id="red"><h1>R</h1></div>
-        <div class="clearfix"></div>
-      </section>
-    </div>
-
-    <div id="first-time-modal">
-      <p>Click on a Rep's name to learn more!</p>
-    </div>
-
-    <!-- page with API data -->
-    <div id="officials-page">
-      <a href="#first-time-modal" rel="modal:open"></a>
-      <section id="rep-list">
-      </section>
-
-      <section id="map"></section>
-      <!-- Placeholder to test map -->
-    </div>
-    <!-- About page -->
-    <div id="about">
-      <div class="outside">
-        <div class="inside">
-          <div class="img-placeholder"></div>
-          <h1>Stefanie</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="inside">
-          <div class="img-placeholder"></div>
-          <h1>Chris</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-      <div class="outside">
-        <div class="inside">
-          <div class="img-placeholder"></div>
-          <h1>Matt</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="inside">
-          <div class="img-placeholder"></div>
-          <h1>Jeff</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="clearfix">
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li class="clearfix">
-          <a href="#" class="icon-facebook2"></a>
-          <a href="#" class="icon-mail4"></a>
-          <a href="#" class="icon-twitter"></a>
-        </li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </nav>
-  </footer>
-  <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
-  <script src="vendor/scripts/jquery-ui.min.js"></script>
-  <script src="vendor/scripts/jquery-modal.js"></script>
-  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDZ4SEKlLpCmZ3SXBySjzNBnzn1-iF2po"></script>
-  <script src="vendor/scripts/handlebars.js"></script>
-  <script src="vendor/scripts/page.js"></script>
-
-  <script src="scripts/model/civicDataAPI.js"></script>
-  <script src="scripts/model/mapAPI.js"></script>
-  <script src="scripts/model/dataBase.js"></script>
-
-
-  <script src="scripts/view/landingPageView.js"></script>
-  <script src="scripts/view/officialsPageView.js"></script>
-  <script src="scripts/view/aboutPageView.js"></script>
-
-  <script src="scripts/controller/landingPageController.js"></script>
-  <script src="scripts/controller/officialsPageController.js"></script>
-  <script src="scripts/controller/aboutPageController.js"></script>
-
-  <script src="scripts/controller/routes.js"></script>
-</body>
-
+    <script src="scripts/controller/routes.js"></script>
+  </body>
 </html>

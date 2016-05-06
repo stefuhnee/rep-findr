@@ -1,7 +1,4 @@
 @import url(../vendor/styles/normalize.css);
-@import url(../vendor/styles/jquery-ui.min.css);
-@import url(../vendor/styles/jquery-ui.structure.min.css);
-@import url(../vendor/styles/jquery-ui.theme.min.css);
 @import url(../vendor/styles/icons.css);
 @import url(../vendor/styles/jquery-modal.css);
 body {
@@ -31,12 +28,14 @@ footer {
 
 header {
   background-color: #D6D6D6;
+  border-bottom: 1px solid #53585F;
   position: fixed;
   z-index: 50;
   height: 60px;
   width: 100%;
   text-align: center;
-  display: table; }
+  display: table;
+  top: 0; }
   header h1 {
     display: table-cell;
     vertical-align: middle;
@@ -55,13 +54,13 @@ main {
   width: 100%;
   z-index: -1; }
 
-#about {
+#about-page {
   width: 100%;
   margin-top: 2vh; }
-  #about .outside {
+  #about-page .outside {
     margin: 0 auto;
     width: 100%; }
-    #about .outside .inside {
+    #about-page .outside .inside {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       -ms-box-sizing: border-box;
@@ -71,14 +70,15 @@ main {
       text-align: center;
       float: left;
       display: inline-block; }
-      #about .outside .inside h1 {
+      #about-page .outside .inside h1 {
         margin: 2vh auto;
         font-size: 4vh; }
-      #about .outside .inside p {
+      #about-page .outside .inside p {
         margin-top: 0;
         margin-bottom: 2vh;
-        line-height: 24px; }
-      #about .outside .inside .img-placeholder {
+        line-height: 24px;
+        text-align: left; }
+      #about-page .outside .inside .img-placeholder {
         margin: 0 auto;
         margin-top: 2vh;
         background-color: #3C3B6E;
@@ -118,12 +118,11 @@ footer nav {
   display: table;
   height: 50vh;
   width: 100%;
-  outline: 1px solid black;
   position: relative; }
   .main-input div {
-    background-image: url("http://cdn.fansided.com/wp-content/blogs.dir/276/files/2014/07/murica-eagle-2013-850x560.jpg");
+    background-image: url("/img/murica2.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: auto;
     background-repeat: no-repeat;
     display: table-cell;
     vertical-align: middle;
@@ -131,37 +130,88 @@ footer nav {
     text-align: center; }
     .main-input div input {
       font-size: 3vh;
-      color: #D6D6D6;
+      color: #3C3B6E;
       text-align: center;
-      width: 75%;
-      height: 13%;
+      width: 150px;
+      height: 5vh;
       box-shadow: 1px 2px 6px #53585F; }
+      @media only screen and (min-width: 375px) {
+        .main-input div input {
+          width: 300px; } }
+      @media only screen and (min-width: 768px) {
+        .main-input div input {
+          width: 500px; } }
+      @media only screen and (min-width: 960px) {
+        .main-input div input {
+          width: 700px; } }
     .main-input div button {
       color: white;
       font-size: 3vh;
       background-color: #3C3B6E;
+      margin: 0 auto;
       margin-top: 2vh;
-      width: 55%;
-      height: 13%;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      -ms-border-radius: 12px;
-      border-radius: 12px;
+      width: 150px;
+      height: 5vh;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       -ms-box-shadow: none;
       box-shadow: none;
       text-shadow: none;
+      display: block;
       border: none; }
+      @media only screen and (min-width: 375px) {
+        .main-input div button {
+          width: 150px; } }
+      @media only screen and (min-width: 768px) {
+        .main-input div button {
+          width: 200px; } }
+      @media only screen and (min-width: 960px) {
+        .main-input div button {
+          width: 200px; } }
 
 #map {
-  height: 500px;
-  max-width: 500px; }
+  width: 75%;
+  height: 65vh;
+  margin: auto; }
 
 .modal {
   display: none;
-  width: 85%;
-  margin: 0 auto; }
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute; }
+
+.rep-details {
+  top: 20vh; }
+  .rep-details img {
+    max-width: 30%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+  .rep-details h1 {
+    margin-bottom: 0;
+    margin-top: .2em; }
+  .rep-details h2 {
+    font-size: 1.5em;
+    margin-top: .2em;
+    margin-bottom: 0; }
+  .rep-details h3 {
+    font-size: 1.25em;
+    margin-top: .2em; }
+  .rep-details h4 {
+    font-size: 1.25em; }
+  .rep-details p {
+    padding: 0 0;
+    margin: .2em; }
+    .rep-details p:first-of-type {
+      margin: .7em; }
+  .rep-details a {
+    text-decoration: underline; }
 
 a.Republican-color, h1.Republican-color {
   color: #B22234; }
@@ -173,11 +223,10 @@ a.Independent-color, h1.Independent-color {
   color: #53585F; }
 
 #first-time-modal {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
+  position: absolute;
+  top: 60vh;
   z-index: 2;
-  width: 85%;
+  width: 75%;
   background-color: transparent;
   padding: 15px 30px;
   -webkit-border-radius: 0;
@@ -188,39 +237,63 @@ a.Independent-color, h1.Independent-color {
   -moz-box-shadow: none;
   -ms-box-shadow: none;
   box-shadow: none;
-  text-align: center;
-  margin-top: 50vh; }
-  #first-time-modal p {
+  text-align: center; }
+  #first-time-modal h1 {
     color: white; }
   #first-time-modal a.close-modal {
     display: none; }
 
+#officials-page {
+  text-align: center; }
+  #officials-page #rep-list {
+    font-size: 80%; }
+    @media only screen and (min-width: 375px) {
+      #officials-page #rep-list {
+        font-size: 60%; } }
+  #officials-page #address-text-container {
+    width: 75%;
+    background-color: #3C3B6E;
+    color: white;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin: 0 auto; }
+  #officials-page #address-text p {
+    padding-right: 1vh;
+    padding-left: 1vh; }
+  #officials-page a[href="#first-time-modal"] {
+    display: none; }
+  #officials-page p {
+    margin: 0 auto; }
+
 .party-boxes {
-  width: 100%;
-  height: 20vh;
   position: relative; }
+  .party-boxes div {
+    margin: 0 auto;
+    height: 20vh;
+    text-align: center; }
   .party-boxes #blue, .party-boxes #red {
     height: 100%;
-    width: 43%;
+    max-width: 43%;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     border-radius: 25px;
-    display: table;
-    text-align: center; }
+    display: inline; }
     .party-boxes #blue h1, .party-boxes #red h1 {
       color: white;
       font-size: 12vh;
       display: table-cell;
       vertical-align: middle; }
   .party-boxes #blue {
-    margin-left: 2vh;
-    float: left;
-    background-color: #3C3B6E; }
+    margin-right: 2vh; }
+    @media only screen and (min-width: 768px) {
+      .party-boxes #blue {
+        margin-right: 10vh; } }
   .party-boxes #red {
-    margin-right: 2vh;
-    float: right;
-    background-color: #B22234; }
+    margin-left: 2vh; }
+    @media only screen and (min-width: 768px) {
+      .party-boxes #red {
+        margin-left: 10vh; } }
 
 .project-info {
   padding: 0 2vh;

@@ -1,5 +1,6 @@
 (function(module) {
   var civicDataAPI = {};
+  var dataReturned = [];
 
   civicDataAPI.officialArray = [];
 
@@ -11,12 +12,13 @@
     this.phone = phone;
     this.photoURL = photoURL;
     this.social = social;
-    this.handlebarsID = this.name.split(/\s/g).join('-');
+    this.handlebarsID = this.name.replace(/[^a-z]+/ig, '');
+    this.phoneHREF = this.phone.replace(/\D+/g, '');
   }
 
   civicDataAPI.requestData = function(userAddress, level, official) {
-    $.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + userAddress + '&includeOffices=true&levels=' + level + '&roles=' + official + '&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
-    .done(function(data) {
+    $.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + userAddress + '&includeOffices=true&levels=' + level + '&roles=' + official + '&key=' + GOOGLE_CIVIC_TOKEN)
+    .success(function(data) {
       civicDataAPI.handleData(data);
     });
   };
