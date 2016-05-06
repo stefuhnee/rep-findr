@@ -22,14 +22,14 @@
   }
 
   #blue {
-    margin-right: $gutter*2;
+    margin-right: $gutter;
     @media only screen and (min-width: $break-medium) {
       margin-right: $gutter*5;
     }
   }
 
   #red {
-    margin-left: $gutter*2;
+    margin-left: $gutter;
     @media only screen and (min-width: $break-medium) {
       margin-left: $gutter*5;
     }

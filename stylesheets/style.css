@@ -288,12 +288,12 @@ a.Independent-color, h1.Independent-color {
       display: table-cell;
       vertical-align: middle; }
   .party-boxes #blue {
-    margin-right: 4vh; }
+    margin-right: 2vh; }
     @media only screen and (min-width: 768px) {
       .party-boxes #blue {
         margin-right: 10vh; } }
   .party-boxes #red {
-    margin-left: 4vh; }
+    margin-left: 2vh; }
     @media only screen and (min-width: 768px) {
       .party-boxes #red {
         margin-left: 10vh; } }
