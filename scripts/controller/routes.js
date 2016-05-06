@@ -4,6 +4,8 @@ page('/reps/:address', officialsPageController.initRepsPage, officialsPageContro
 
 page('/about', aboutPageController.initAboutPage);
 
+page('/reps/', '/');
+
 page({
   hashbang: true
 });
