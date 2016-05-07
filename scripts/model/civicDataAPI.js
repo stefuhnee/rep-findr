@@ -17,7 +17,6 @@
   }
 
   civicDataAPI.requestData = function(userAddress, queryObj) {
-    dataReturned = [];
     for (var key in queryObj) {
       $.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + userAddress + '&includeOffices=true&levels=' + queryObj[key] + '&roles=' + key + '&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
       .done(function(data) {
