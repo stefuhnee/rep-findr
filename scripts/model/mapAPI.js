@@ -24,8 +24,6 @@
           title: 'Your ballot dropbox location is ' + pollTitle + ' ' + pollAddress,
           animation: google.maps.Animation.DROP
         });
-      } else {
-        console.log('Geocode was not successful for the following reason: ' + status);
       }
     });
   };
