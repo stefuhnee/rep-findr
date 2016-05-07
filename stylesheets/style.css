@@ -56,6 +56,10 @@ main {
   top: 60px;
   width: 100%;
   z-index: -1; }
+  @media only screen and (min-width: 960px) {
+    main p {
+      margin: 4vh auto;
+      width: 960px; } }
 
 #about-page {
   width: 100%;

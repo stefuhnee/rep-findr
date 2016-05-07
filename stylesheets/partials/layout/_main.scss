@@ -4,4 +4,11 @@ main {
   top: 60px;
   width: 100%;
   z-index: -1;
+
+  p {
+    @media only screen and (min-width: $break-large) {
+    margin: $gutter*2 auto;
+    width: 960px;
+    }
+  }
 }
