@@ -84,7 +84,8 @@ main {
         margin-top: 0;
         margin-bottom: 2vh;
         line-height: 24px;
-        text-align: left; }
+        text-align: left;
+        max-width: 100%; }
       #about-page .outside .inside .img-placeholder {
         margin: 0 auto;
         margin-top: 2vh;
@@ -232,6 +233,9 @@ footer nav {
       margin: .7em; }
   .rep-details a {
     text-decoration: underline; }
+  .rep-details a.close-modal {
+    top: 0;
+    right: 0; }
 
 a.Republican-color, h1.Republican-color {
   color: #B22234; }
@@ -243,7 +247,8 @@ a.Independent-color, h1.Independent-color {
   color: #53585F; }
 
 #first-time-modal {
-  position: absolute;
+  position: relative;
+  margin: 0 auto;
   top: 60vh;
   z-index: 2;
   width: 75%;
