@@ -7,7 +7,8 @@ body {
   position: relative;
   font-family: Helvetica;
   z-index: -1;
-  color: #53585F; }
+  color: #53585F;
+  background-color: white; }
 
 p {
   font-size: 3vh; }
