@@ -24,13 +24,14 @@
   }
 
   img {
-    max-width: 30%;
+    max-width: 25%;
     @include border-radius(50%);
   }
 
   h1 {
     margin-bottom: 0;
     margin-top: .2em;
+    font-size: 2em
   }
 
   h2 {
@@ -45,7 +46,7 @@
   }
 
   h4 {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 
   p {

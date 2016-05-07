@@ -18,6 +18,11 @@
       dataBase.myDataBaseRef.push(zipObject);
       page('/reps/' + userAddress);
     });
+    $('.main-input input').keyup(function() {
+      if(event.keyCode == 13) {
+        $('.rep-findr').click();
+      }
+    });
   };
 
   landingPageView.checkLocalStorage = function() {
