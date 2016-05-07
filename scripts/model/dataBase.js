@@ -10,5 +10,4 @@
   });
 
   module.dataBase = dataBase;
-
 })(window);

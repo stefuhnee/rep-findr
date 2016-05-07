@@ -25,7 +25,7 @@
           animation: google.maps.Animation.DROP
         });
       } else {
-        alert('Geocode was not successful for the following reason: ' + status);
+        console.log('Geocode was not successful for the following reason: ' + status);
       }
     });
   };
@@ -40,13 +40,13 @@
         $('#address-text').text('Your ballot dropbox location is ' + pollTitle + ' ' + pollAddress);
         mapAPI.requestMap(pollAddress, pollTitle);
       } else {
-        mapAPI.requestMap(userAddress, 'not listed in the Google Civic API so here is a map of your address instead:');
+        mapAPI.requestMap(userAddress, 'not listed in the Google Civic API, so here is a map of your address instead:');
         $('#address-text').text('Your ballot dropbox location is not listed in the Google Civic API so here is a map of your address instead:');
       }
     })
     .fail(function() {
-      mapAPI.requestMap(userAddress, 'not listed in the Google Civic API so here is a map of your address instead:');
-      $('#address-text').text('Your ballot dropbox location is not listed in the Google Civic API so here is a map of your address instead:');
+      mapAPI.requestMap(userAddress, 'not listed in the Google Civic API, so here is a map of your address instead:');
+      $('#address-text').text('Your ballot dropbox location is not listed in the Google Civic API, so here is a map of your address instead:');
     });
   };
 
