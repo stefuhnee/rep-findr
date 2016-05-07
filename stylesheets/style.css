@@ -183,12 +183,21 @@ footer nav {
 .modal {
   display: none;
   width: 75%;
-  margin: 0 auto;
-  text-align: center;
-  position: absolute; }
+  text-align: center; }
+  @media only screen and (min-width: 960px) {
+    .modal {
+      width: 50%; } }
+
+.jquery-modal {
+  display: table; }
 
 .rep-details {
-  top: 20vh; }
+  top: 8vh;
+  margin: 0 auto;
+  position: relative;
+  height: 85%;
+  overflow-y: auto;
+  overflow-x: hidden; }
   .rep-details p.mailing-address {
     text-transform: capitalize; }
   .rep-details img {
