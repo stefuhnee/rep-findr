@@ -1,4 +1,4 @@
-(function(module){
+(function(module) {
   var mapAPI = {};
   var geocoder;
   var map;
@@ -14,8 +14,8 @@
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
   };
 
-  mapAPI.requestMap = function (pollAddress, pollTitle) {
-    geocoder.geocode( { 'address': pollAddress}, function(results, status) {
+  mapAPI.requestMap = function(pollAddress, pollTitle) {
+    geocoder.geocode({'address': pollAddress}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         map.setCenter(results[0].geometry.location);
         var marker = new google.maps.Marker({
@@ -29,7 +29,7 @@
   };
 
   mapAPI.requestDropBox = function(userAddress) {
-    $.get('https://www.googleapis.com/civicinfo/v2/voterinfo?address=' + userAddress + '&fields=dropOffLocations&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
+    $.get('https://www.googleapis.com/civicinfo/v2/voterinfo?address=' + userAddress + '&fields=dropOffLocations&key=' + GOOGLE_CIVIC_TOKEN)
     .success(function(data) {
       if (data.hasOwnProperty('dropOffLocations')) {
         mapAPI.dropbox = data;

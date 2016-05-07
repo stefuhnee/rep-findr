@@ -18,10 +18,9 @@
 
   civicDataAPI.requestData = function(userAddress, queryObj) {
     for (var key in queryObj) {
-      $.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + userAddress + '&includeOffices=true&levels=' + queryObj[key] + '&roles=' + key + '&key=AIzaSyBe_nzIg-0E_xI5V8owjDT_we48Xp0psPk')
+      $.get('https://www.googleapis.com/civicinfo/v2/representatives?address=' + userAddress + '&includeOffices=true&levels=' + queryObj[key] + '&roles=' + key + '&key=' + GOOGLE_CIVIC_TOKEN)
       .done(function(data) {
         dataReturned.push(data);
-        console.log('dataReturned array', dataReturned);
         if (dataReturned.length === 3) {
           civicDataAPI.handleData(dataReturned);
           dataReturned = [];
