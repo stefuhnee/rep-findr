@@ -206,27 +206,28 @@ footer nav {
   .rep-details p.mailing-address {
     text-transform: capitalize; }
   .rep-details img {
-    max-width: 25%;
+    max-width: 30%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%; }
   .rep-details h1 {
     margin-bottom: 0;
-    margin-top: .2em;
-    font-size: 2em; }
+    margin-top: 2vh;
+    font-size: 6vmin; }
   .rep-details h2 {
-    font-size: 1.5em;
-    margin-top: .2em;
+    font-size: 5vmin;
+    margin-top: 2vh;
     margin-bottom: 0; }
   .rep-details h3 {
-    font-size: 1.25em;
-    margin-top: .2em; }
+    font-size: 4vmin;
+    margin-top: 2vh; }
   .rep-details h4 {
-    font-size: 1em; }
+    font-size: 4vmin; }
   .rep-details p {
+    font-size: 4vmin;
     padding: 0 0;
-    margin: .2em; }
+    margin: 1vh; }
     .rep-details p :first-of-type {
       margin: .7em; }
   .rep-details a {
