@@ -132,7 +132,7 @@ footer nav {
     text-align: center; }
     .main-input div input {
       font-size: 3vh;
-      color: #3C3B6E;
+      color: #53585F;
       text-align: center;
       width: 150px;
       height: 5vh;
@@ -148,7 +148,7 @@ footer nav {
           width: 700px; } }
     .main-input div button {
       color: white;
-      font-size: 3vh;
+      font-size: 2.5vh;
       background-color: #3C3B6E;
       margin: 0 auto;
       margin-top: 2vh;
