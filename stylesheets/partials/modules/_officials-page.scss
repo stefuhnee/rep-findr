@@ -25,6 +25,7 @@
 
   #rep-list {
     font-size: 80%;
+    margin-bottom: $gutter*2;
     @media only screen and (min-width: $break-small) {
       font-size: 60%;
     }

@@ -280,7 +280,8 @@ a.Independent-color, h1.Independent-color {
     padding-right: 1vh;
     padding-left: 1vh; }
   #officials-page #rep-list {
-    font-size: 80%; }
+    font-size: 80%;
+    margin-bottom: 4vh; }
     @media only screen and (min-width: 375px) {
       #officials-page #rep-list {
         font-size: 60%; } }
