@@ -19,15 +19,16 @@
           <p class="mailing-address">{{address.0.city}}, {{address.0.state}} {{address.0.zip}}</p>
           <h4>Social Media</h4>
           {{#if social.Facebook}}
-          <p>Facebook: <a href="http://www.facebook.com/{{social.Facebook}}" title="{{name}}'s Facebook account'">{{social.Facebook}}</a></p>
+          <p>Facebook: <a href="http://www.facebook.com/{{social.Facebook}}" title="{{name}}'s Facebook account'" target="blank">{{social.Facebook}}</a></p>
           {{/if}}
           {{#if social.Twitter}}
-          <p>Twitter: <a href="http://www.twitter.com/{{social.Twitter}}" title="{{name}}'s Facebook account'">{{social.Twitter}}</a></p>
+          <p>Twitter: <a href="http://www.twitter.com/{{social.Twitter}}" title="{{name}}'s Facebook account'" target="blank">{{social.Twitter}}</a></p>
           {{/if}}
         </div>
       </article>
     </script>
   </head>
+
   <body>
     <header>
       <a href="/" title="RepFindr Home"><h1>RepFin<span id='d'>d</span><span id='r'>r</span></h1></a>
@@ -106,6 +107,7 @@
         </ul>
       </nav>
     </footer>
+    <!--Third Party-->
     <script src="vendor/scripts/jquery-2.2.3.min.js"></script>
     <script src="vendor/scripts/jquery-modal.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
@@ -113,20 +115,20 @@
     <script src="vendor/scripts/handlebars.js"></script>
     <script src="vendor/scripts/page.js"></script>
     <script src="vendor/scripts/konami.js"></script>
-
+    <!--Model-->
     <script src="scripts/env.js"></script>
     <script src="scripts/model/civicDataAPI.js"></script>
     <script src="scripts/model/mapAPI.js"></script>
     <script src="scripts/model/dataBase.js"></script>
-
+    <!--View-->
     <script src="scripts/view/landingPageView.js"></script>
     <script src="scripts/view/officialsPageView.js"></script>
     <script src="scripts/view/aboutPageView.js"></script>
-
+    <!--Controller-->
     <script src="scripts/controller/landingPageController.js"></script>
     <script src="scripts/controller/officialsPageController.js"></script>
     <script src="scripts/controller/aboutPageController.js"></script>
-
     <script src="scripts/controller/routes.js"></script>
+
   </body>
 </html>

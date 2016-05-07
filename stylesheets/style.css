@@ -36,9 +36,11 @@ header {
   text-align: center;
   display: table;
   top: 0; }
-  header h1 {
+  header a {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: middle; }
+  header h1 {
+    margin: 0;
     color: white;
     font-style: italic;
     font-size: 6vh; }
@@ -187,6 +189,8 @@ footer nav {
 
 .rep-details {
   top: 20vh; }
+  .rep-details p.mailing-address {
+    text-transform: capitalize; }
   .rep-details img {
     max-width: 30%;
     -webkit-border-radius: 50%;
@@ -208,7 +212,7 @@ footer nav {
   .rep-details p {
     padding: 0 0;
     margin: .2em; }
-    .rep-details p:first-of-type {
+    .rep-details p :first-of-type {
       margin: .7em; }
   .rep-details a {
     text-decoration: underline; }
@@ -245,11 +249,10 @@ a.Independent-color, h1.Independent-color {
 
 #officials-page {
   text-align: center; }
-  #officials-page #rep-list {
-    font-size: 80%; }
-    @media only screen and (min-width: 375px) {
-      #officials-page #rep-list {
-        font-size: 60%; } }
+  #officials-page p {
+    margin: 0 auto; }
+  #officials-page a[href="#first-time-modal"] {
+    display: none; }
   #officials-page #address-text-container {
     width: 75%;
     background-color: #3C3B6E;
@@ -260,10 +263,11 @@ a.Independent-color, h1.Independent-color {
   #officials-page #address-text p {
     padding-right: 1vh;
     padding-left: 1vh; }
-  #officials-page a[href="#first-time-modal"] {
-    display: none; }
-  #officials-page p {
-    margin: 0 auto; }
+  #officials-page #rep-list {
+    font-size: 80%; }
+    @media only screen and (min-width: 375px) {
+      #officials-page #rep-list {
+        font-size: 60%; } }
 
 .party-boxes {
   position: relative; }
@@ -301,7 +305,7 @@ a.Independent-color, h1.Independent-color {
   text-align: center;
   position: relative; }
   .project-info h1 {
-    font-size: 20px;
+    font-size: 4vh;
     display: inline-block;
     margin: 0 auto;
     color: black; }

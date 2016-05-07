@@ -21,15 +21,15 @@
       width: 150px;
       height: 5vh;
       box-shadow: 1px 2px 6px $dark-grey;
-        @media only screen and (min-width: $break-small) {
-          width: 300px;
-        }
-        @media only screen and (min-width: $break-medium) {
-          width: 500px;
-        }
-        @media only screen and (min-width: $break-large) {
-          width: 700px;
-        }
+      @media only screen and (min-width: $break-small) {
+        width: 300px;
+      }
+      @media only screen and (min-width: $break-medium) {
+        width: 500px;
+      }
+      @media only screen and (min-width: $break-large) {
+        width: 700px;
+      }
     }
 
     button {
@@ -45,15 +45,15 @@
       text-shadow:none;
       display: block;
       border:none;
-        @media only screen and (min-width: $break-small) {
-          width: 150px;
-        }
-        @media only screen and (min-width: $break-medium) {
-          width: 200px;
-        }
-        @media only screen and (min-width: $break-large) {
-          width: 200px;
-        }
+      @media only screen and (min-width: $break-small) {
+        width: 150px;
+      }
+      @media only screen and (min-width: $break-medium) {
+        width: 200px;
+      }
+      @media only screen and (min-width: $break-large) {
+        width: 200px;
+      }
     }
   }
 }
