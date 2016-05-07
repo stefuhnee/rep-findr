@@ -1,7 +1,7 @@
-(function (module){
+(function(module) {
   var landingPageController = {};
 
-  landingPageController.initLandingPage = function(){
+  landingPageController.initLandingPage = function() {
     landingPageView.showLandingPage();
     landingPageView.handleUserAddress();
   };
