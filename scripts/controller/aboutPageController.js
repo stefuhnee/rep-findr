@@ -1,4 +1,4 @@
-(function (module){
+(function(module) {
   var aboutPageController = {};
 
   aboutPageController.initAboutPage = function() {
@@ -6,4 +6,4 @@
   };
 
   module.aboutPageController = aboutPageController;
-}) (window);
+})(window);

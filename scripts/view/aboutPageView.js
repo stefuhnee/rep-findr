@@ -1,4 +1,4 @@
-(function (module){
+(function(module) {
   var aboutPageView = {};
 
   aboutPageView.showAboutPage = function() {
@@ -7,4 +7,4 @@
   };
 
   module.aboutPageView = aboutPageView;
-}) (window);
+})(window);
