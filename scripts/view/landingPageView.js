@@ -1,4 +1,4 @@
-(function (module){
+(function(module) {
   var landingPageView = {};
 
   var userAddress;
@@ -10,13 +10,18 @@
     $('#landing-page').show();
   };
 
-  landingPageView.handleUserAddress = function(){
-    $('.rep-findr').one('click', $addressInputEl, function(){
+  landingPageView.handleUserAddress = function() {
+    $('.rep-findr').one('click', $addressInputEl, function() {
       userAddress = $addressInputEl.val().replace(/\s/g, '+');
       zipCode = userAddress.split('+').pop();
       zipObject = {'user zipcode': zipCode};
       dataBase.myDataBaseRef.push(zipObject);
       page('/reps/' + userAddress);
+    });
+    $('.main-input input').keyup(function() {
+      if(event.keyCode == 13) {
+        $('.rep-findr').click();
+      }
     });
   };
 
